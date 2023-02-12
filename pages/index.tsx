@@ -18,7 +18,9 @@ interface Props {
 const Home: NextPage<Props> = ({ markdown }) => {
   return (
     <Layout>
-      <ReactMarkdown>{markdown}</ReactMarkdown>
+      <div className="markdown">
+        <ReactMarkdown>{markdown}</ReactMarkdown>
+      </div>
     </Layout>
   )
 }

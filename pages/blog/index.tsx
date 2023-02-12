@@ -15,7 +15,7 @@ interface BlogPostMetadata {
   id: string
 }
 
-interface BlogPostsMetadata {
+export interface BlogPostsMetadata {
   posts: BlogPostMetadata[]
 }
 

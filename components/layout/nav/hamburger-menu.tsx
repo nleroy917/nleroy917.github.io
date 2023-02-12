@@ -32,6 +32,11 @@ export const HamburgerMenu: FC = () => {
           } absolute right-0 w-48 bg-white p-2 mt-2 rounded-md shadow-lg border-2 border-black`}
         >
           <li className="my-1 font-bold">
+            <Link href="/" className="underline text-black">
+              home
+            </Link>
+          </li>
+          <li className="my-1 font-bold">
             <Link className="underline text-black" href="/">
               software
             </Link>
