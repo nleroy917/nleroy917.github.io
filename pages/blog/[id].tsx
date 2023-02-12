@@ -1,22 +1,42 @@
 import { fetchContent } from '@/utils/cms'
+import yaml from 'js-yaml'
 import fs from 'fs'
 import { GetStaticProps, NextPage } from 'next'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 
-export const getStaticPaths = async () => {
-  const blogPostPaths = fs
-    .readdirSync('./data/cms/blog')
-    .filter((path) => path.endsWith('.md'))
-    .map((path) => {
-      return {
-        params: {
-          id: path.replace('.md', ''),
-        },
-      }
-    })
+interface BlogPostMetadata {
+  title: string
+  date: string
+  description: string
+  content: string
+  id: string
+}
 
+interface BlogPostsMetadata {
+  posts: BlogPostMetadata[]
+}
+
+export const getStaticPaths = async () => {
+  // read all blog posts from meta file
+  const blogPostData = yaml.load(
+    fs.readFileSync('./data/cms/blog/posts.yaml', 'utf8')
+  ) as BlogPostsMetadata
+
+  // Convert all dates to strings
+  const blogPostMetadata = blogPostData.posts.map((post) => ({
+    ...post,
+    date: post.date.toString(),
+  }))
+
+  const paths = blogPostMetadata.map((post) => {
+    return {
+      params: {
+        id: post.id,
+      },
+    }
+  })
   return {
-    paths: blogPostPaths,
+    paths: paths,
     fallback: false,
   }
 }

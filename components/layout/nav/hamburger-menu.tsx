@@ -1,4 +1,5 @@
 import { useOnClickOutside } from '@/hooks/useOnClickOutside'
+import Link from 'next/link'
 import { FC, useState, useRef } from 'react'
 
 export const HamburgerMenu: FC = () => {
@@ -30,9 +31,26 @@ export const HamburgerMenu: FC = () => {
             isOpen ? '' : 'hidden'
           } absolute right-0 w-48 bg-white p-2 mt-2 rounded-md shadow-lg border-2 border-black`}
         >
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
+          <li className="my-1 font-bold">
+            <Link className="underline text-black" href="/">
+              software
+            </Link>
+          </li>
+          <li className="my-1 font-bold">
+            <Link className="underline text-black" href="/">
+              publications
+            </Link>
+          </li>
+          <li className="my-1 font-bold">
+            <Link className="underline text-black" href="/blog">
+              blog
+            </Link>
+          </li>
+          <li className="my-1 font-bold">
+            <Link className="underline text-black" href="/">
+              resume
+            </Link>
+          </li>
         </ul>
       </div>
     </>
