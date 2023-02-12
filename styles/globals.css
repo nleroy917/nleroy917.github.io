@@ -20,5 +20,21 @@ a {
 p {
   @apply mb-3;
 }
+
+/* mobile responsiveness */
+.hidden {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .hidden {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
