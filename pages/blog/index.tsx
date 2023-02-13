@@ -50,25 +50,32 @@ const Blog: NextPage<Props> = ({ blogHeadMarkdown, posts }) => {
       <div className="mt-3 mb-5">
         <ReactMarkdown>{blogHeadMarkdown}</ReactMarkdown>
       </div>
-      {posts.map((post) => {
-        return (
-          <PostCard key={post.id}>
-            <div className="w-full flex flex-row items-center justify-between mb-2">
-              <div>
-                <Link className="no-underline" href={`/blog/${post.id}`}>
-                  <h2 className="font-bold mb-0 text-purple-500 hover:underline text-lg">
-                    {post.title}
-                  </h2>
-                </Link>
+      <div className="hidden">
+        {posts.map((post) => {
+          return (
+            <PostCard key={post.id}>
+              <div className="flex flex-row items-center justify-between w-full mb-2">
+                <div>
+                  <Link className="no-underline" href={`/blog/${post.id}`}>
+                    <h2 className="mb-0 text-lg font-bold text-purple-500 hover:underline">
+                      {post.title}
+                    </h2>
+                  </Link>
+                </div>
+                <div className="text-lg text-purple-600">
+                  {new Date(post.date).toLocaleDateString()}
+                </div>
               </div>
-              <div className="text-purple-600 text-lg">
-                {new Date(post.date).toLocaleDateString()}
-              </div>
-            </div>
-            <p>{post.description}</p>
-          </PostCard>
-        )
-      })}
+              <p>{post.description}</p>
+            </PostCard>
+          )
+        })}
+      </div>
+      <div>
+        <h2 className="text-2xl font-bold animate-pulse">
+          Coming Soon... I am moving my posts.
+        </h2>
+      </div>
     </Layout>
   )
 }
