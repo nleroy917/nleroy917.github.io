@@ -1,0 +1,9 @@
+software:
+  - name: optipyzer
+    github: https://github.com/nleroy917/optipyzer
+    description: Multi-species codon optimization server written in python.
+    registry: nleroy917/optipyzer
+  - name: spottydata
+    github: https://github.com/nleroy917/optipyzer
+    description: Spotify playlist analyzer for the web. Built with nextjs and python.
+    registry: nleroy917/spottydata

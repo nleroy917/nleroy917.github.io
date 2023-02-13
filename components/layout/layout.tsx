@@ -14,7 +14,7 @@ export const Layout: FC<Props> = (props) => {
   return (
     <>
       <SEO title={title} description={description} image={image} />
-      <main className="w-full flex flex-col items-center content-center">
+      <main className="w-full flex flex-col items-center content-center bg-purple-100 min-h-screen">
         <header className="w-full">
           <Nav />
         </header>

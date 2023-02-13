@@ -7,7 +7,7 @@ interface Props {
 export const NavItem: FC<Props> = (props) => {
   const { children } = props
   return (
-    <div className="no-underline ml-3 border-2 px-2 py-1 text-white bg-black border-black rounded-md hover:bg-white hover:text-black transition-all">
+    <div className="no-underline text-black ml-3 border-2 border-black rounded-md px-2 hover:bg-black hover:text-white transition-all">
       {children}
     </div>
   )

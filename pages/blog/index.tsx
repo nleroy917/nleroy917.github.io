@@ -53,15 +53,15 @@ const Blog: NextPage<Props> = ({ blogHeadMarkdown, posts }) => {
       {posts.map((post) => {
         return (
           <PostCard key={post.id}>
-            <div className="w-full flex flex-row items-center justify-between">
+            <div className="w-full flex flex-row items-center justify-between mb-2">
               <div>
                 <Link className="no-underline" href={`/blog/${post.id}`}>
-                  <h2 className="font-bold mb-0 text-purple-500 hover:underline">
+                  <h2 className="font-bold mb-0 text-purple-500 hover:underline text-lg">
                     {post.title}
                   </h2>
                 </Link>
               </div>
-              <div className="text-purple-600">
+              <div className="text-purple-600 text-lg">
                 {new Date(post.date).toLocaleDateString()}
               </div>
             </div>
