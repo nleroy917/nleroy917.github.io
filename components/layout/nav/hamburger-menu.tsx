@@ -16,7 +16,7 @@ export const HamburgerMenu: FC = () => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <svg
-          className="fill-current h-6 w-6"
+          className="w-6 h-6 fill-current"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -32,30 +32,30 @@ export const HamburgerMenu: FC = () => {
           } absolute right-0 w-48 bg-white p-2 mt-2 rounded-md shadow-lg border-2 border-black`}
         >
           <li className="my-1 font-bold">
-            <Link href="/" className="underline text-black">
+            <Link href="/" className="text-black underline">
               home
             </Link>
           </li>
           <li className="my-1 font-bold">
-            <Link className="underline text-black" href="/software">
+            <Link className="text-black underline" href="/software">
               software
             </Link>
           </li>
           <li className="my-1 font-bold">
-            <Link className="underline text-black" href="/publications">
+            <Link className="text-black underline" href="/publications">
               publications
             </Link>
           </li>
           <li className="my-1 font-bold">
-            <Link className="underline text-black" href="/blog">
+            <Link className="text-black underline" href="/blog">
               blog
             </Link>
           </li>
-          <li className="my-1 font-bold">
-            <Link className="underline text-black" href="/">
+          {/* <li className="my-1 font-bold">
+            <Link className="text-black underline" href="/">
               resume
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </>

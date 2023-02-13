@@ -52,7 +52,10 @@ const Publications: NextPage<Props> = ({ markdown, publications }) => {
       <div>
         {publications.map((entry) => {
           return (
-            <div key={entry.id} className="my-3">
+            <div
+              key={entry.id}
+              className="p-2 my-3 bg-purple-200 border-2 border-black rounded-md lg:my-4"
+            >
               <h2 className="text-base font-bold lg:text-lg">{entry.title}</h2>
               <p className="text-sm lg:text-base">{entry.authors}</p>
               <div className="flex flex-col lg:flex-row">

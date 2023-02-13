@@ -10,13 +10,19 @@ interface TagProperties {
 
 const TagProperties: Record<string, TagProperties> = {
   python: {
-    class: 'text-sm border px-2 border-blue-600 text-blue-600 rounded-full',
+    class:
+      'text-sm border px-2 py-0 border-blue-600 text-blue-600 rounded-full',
   },
   bioinformatics: {
-    class: 'text-sm border px-2 border-green-600 text-green-600 rounded-full',
+    class:
+      'text-sm border px-2 py-0 border-green-600 text-green-600 rounded-full',
   },
   web: {
-    class: 'text-sm border px-2 border-black text-black rounded-full',
+    class: 'text-sm border px-2 py-0 border-black text-black rounded-full',
+  },
+  go: {
+    class:
+      'text-sm border px-2 py-0 border-cyan-600 text-cyan-600 rounded-full',
   },
 }
 

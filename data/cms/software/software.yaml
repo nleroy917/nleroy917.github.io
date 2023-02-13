@@ -6,11 +6,17 @@ software:
     tags:
       - python
       - bioinformatics
-      - web
   - name: spottydata
     github: https://github.com/nleroy917/optipyzer
     description: Spotify playlist analyzer for the web. Built with nextjs and python.
     registry: nleroy917/spottydata
     tags:
       - python
+      - web
+  - name: threeo1
+    github: https://github.com/nleroy917/threeo1
+    description: URL shortening service written in Go
+    registry: nleroy917/threeo1
+    tags:
+      - go
       - web

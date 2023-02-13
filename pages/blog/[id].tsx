@@ -67,11 +67,11 @@ const BlogPostPage: NextPage<Props> = (props) => {
   const { markdown, date } = props
   return (
     <>
-      <div className="py-2 flex flex-col items-center">
-        <div className="max-w-4xl">
-          <div className="border-b border-b-gray-200 mb-3 py-1 ">
+      <div className="flex flex-col items-center p-2">
+        <div className="w-full max-w-4xl">
+          <div className="py-1 mb-3 border-b border-b-gray-200 ">
             <Link
-              className="text-purple-600 hover:text-purple-800 underline"
+              className="text-purple-600 underline hover:text-purple-800"
               href="/blog"
             >
               back
@@ -79,7 +79,7 @@ const BlogPostPage: NextPage<Props> = (props) => {
             {' | '}
             <Link
               href="/"
-              className="text-purple-600 hover:text-purple-800 underline"
+              className="text-purple-600 underline hover:text-purple-800"
             >
               home
             </Link>
