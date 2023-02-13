@@ -1,8 +1,6 @@
 import { Octokit } from 'octokit'
 
-const octokit = new Octokit({
-  auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN,
-})
+const octokit = new Octokit()
 
 export const fetchStars = async (registry: string) => {
   const res = await octokit.request(`GET /repos/${registry}`, {
