@@ -37,12 +37,12 @@ export const HamburgerMenu: FC = () => {
             </Link>
           </li>
           <li className="my-1 font-bold">
-            <Link className="underline text-black" href="/">
+            <Link className="underline text-black" href="/software">
               software
             </Link>
           </li>
           <li className="my-1 font-bold">
-            <Link className="underline text-black" href="/">
+            <Link className="underline text-black" href="/publications">
               publications
             </Link>
           </li>
