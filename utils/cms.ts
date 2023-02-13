@@ -8,6 +8,7 @@ export interface SoftwareEntry {
   github: string
   description: string
   registry: string
+  tags: string[]
 }
 
 export interface Software {

@@ -8,6 +8,5 @@ export const fetchStars = async (registry: string) => {
     repo: registry.split('/')[1],
   })
   const data = await res.data
-  const stars = await data.stargazers_count
-  return stars
+  return data.stargazers_count
 }

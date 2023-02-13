@@ -30,7 +30,6 @@ export const getStaticProps = async () => {
     doi: entry.getField('doi').stringify(),
     id: entry._id,
   }))
-  console.log(parsed_pubs)
   return {
     props: {
       markdown: fetchContent('./data/cms/publications-header.md'),
@@ -45,7 +44,6 @@ interface Props {
 }
 
 const Publications: NextPage<Props> = ({ markdown, publications }) => {
-  console.log(publications)
   return (
     <Layout>
       <div className="markdown">
@@ -55,14 +53,16 @@ const Publications: NextPage<Props> = ({ markdown, publications }) => {
         {publications.map((entry) => {
           return (
             <div key={entry.id} className="my-3">
-              <h2 className="font-bold text-lg">{entry.title}</h2>
-              <p>{entry.authors}</p>
-              <div className="flex flex-row">
-                <p className="font-bold">{entry.journal}</p>
+              <h2 className="text-base font-bold lg:text-lg">{entry.title}</h2>
+              <p className="text-sm lg:text-base">{entry.authors}</p>
+              <div className="flex flex-col lg:flex-row">
+                <div className="flex flex-row">
+                  <p className="font-bold">{entry.journal}</p>
+                  <span className="px-1"></span>
+                  <p>({entry.year})</p>
+                </div>
                 <span className="px-1"></span>
-                <p>({entry.year})</p>
-                <span className="px-1"></span>
-                <p>
+                <p className="text-sm lg:text-base">
                   DOI: <a href={`https://doi.org/${entry.doi}`}>{entry.doi}</a>
                 </p>
               </div>
