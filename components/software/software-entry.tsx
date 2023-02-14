@@ -13,7 +13,7 @@ export const SoftwareCard: FC<Props> = ({ entry }) => {
   )
 
   return (
-    <div className="p-2 my-3 bg-purple-200 border-2 border-black rounded-md">
+    <div className="p-2 my-3 bg-purple-100 border-2 border-black rounded-md">
       <div className="flex flex-row items-center">
         <h2 className="text-xl font-bold">{entry.name}</h2>
         <div className="w-16 ml-2 text-sm lg:w-max lg:text-base">

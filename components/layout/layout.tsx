@@ -14,11 +14,11 @@ export const Layout: FC<Props> = (props) => {
   return (
     <>
       <SEO title={title} description={description} image={image} />
-      <main className="w-full flex flex-col items-center content-center bg-purple-100 min-h-screen">
+      <main className="flex flex-col items-center content-center w-full min-h-screen">
         <header className="w-full">
           <Nav />
         </header>
-        <div className="max-w-7xl w-full p-4">{children}</div>
+        <div className="w-full p-4 max-w-7xl">{children}</div>
       </main>
     </>
   )
