@@ -1,7 +1,6 @@
 # Welcome to my personal website
 
-## About Me
-
+## Bio
 My name is Nathan and I am a 2nd year PhD student at the [University of Virginia](https://engineering.virginia.edu/departments/biomedical-engineering). Born and raised in Cincinnati, OH, I have a passion for science and technology that was nurtured from a young age.
 
 I honed my skills as an undergraduate student at [Purdue University](https://engineering.purdue.edu/ABE), where I studied biological engineering. After graduation, I put my education to work at the [Indiana Biosciences Research Institute](https://www.indianabiosciences.org/), where I spent two years gaining valuable experience in the field.
