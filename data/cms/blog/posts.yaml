@@ -4,8 +4,10 @@ posts:
     date: 2023-02-12
     content: karen-cat-dot-com.md
     id: karen-cat-dot-com
+    seo_image: ''
   - title: UVA on 35mm Film
     description: My first roll shooting around grounds
     date: 2022-04-06
     content: uva-on-film.md
     id: uva-on-film
+    seo_image: http://cdn.nathanleroy.io/images/220524000101740021.jpg

@@ -4,6 +4,7 @@ import { GetStaticProps, NextPage } from 'next'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 import Link from 'next/link'
 import { getBlogPostData } from '@/utils/cms'
+import { BlogLayout } from '@/components/layout/blog-layout'
 
 interface BlogPostMetadata {
   title: string
@@ -11,6 +12,7 @@ interface BlogPostMetadata {
   description: string
   content: string
   id: string
+  seo_image?: string
 }
 
 interface BlogPostsMetadata {
@@ -61,12 +63,13 @@ interface Props {
   description: string
   content: string
   id: string
+  seo_image?: string
 }
 
 const BlogPostPage: NextPage<Props> = (props) => {
-  const { markdown, date } = props
+  const { markdown, date, title, seo_image } = props
   return (
-    <>
+    <BlogLayout title={title} image={seo_image || undefined}>
       <div className="flex flex-col items-center p-2">
         <div className="w-full max-w-4xl">
           <div className="py-1 mb-3 border-b border-b-gray-200 ">
@@ -90,7 +93,7 @@ const BlogPostPage: NextPage<Props> = (props) => {
           </div>
         </div>
       </div>
-    </>
+    </BlogLayout>
   )
 }
 
