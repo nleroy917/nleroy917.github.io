@@ -8,6 +8,7 @@ import { BlogLayout } from '@/components/layout/blog-layout'
 import rehypeHighlight from 'rehype-highlight'
 import rehypeRaw from 'rehype-raw'
 import rehypeSanitize from 'rehype-sanitize'
+import Image from 'next/image'
 
 interface BlogPostMetadata {
   title: string
@@ -101,6 +102,18 @@ const BlogPostPage: NextPage<Props> = (props) => {
             <ReactMarkdown
               skipHtml={false}
               rehypePlugins={[rehypeHighlight, rehypeRaw, rehypeSanitize]}
+              components={{
+                img: ({ alt, src }) => (
+                  <Image
+                    src={src || ''}
+                    alt={alt || ''}
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    className="w-full h-auto"
+                  />
+                ),
+              }}
             >
               {markdown}
             </ReactMarkdown>
