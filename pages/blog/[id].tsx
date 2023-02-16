@@ -5,6 +5,9 @@ import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 import Link from 'next/link'
 import { getBlogPostData } from '@/utils/cms'
 import { BlogLayout } from '@/components/layout/blog-layout'
+import rehypeHighlight from 'rehype-highlight'
+import rehypeRaw from 'rehype-raw'
+import rehypeSanitize from 'rehype-sanitize'
 
 interface BlogPostMetadata {
   title: string
@@ -73,23 +76,34 @@ const BlogPostPage: NextPage<Props> = (props) => {
       <div className="flex flex-col items-center p-2">
         <div className="w-full max-w-4xl">
           <div className="py-1 mb-3 border-b border-b-gray-200 ">
-            <Link
-              className="text-purple-600 underline hover:text-purple-800"
-              href="/blog"
-            >
-              back
-            </Link>{' '}
-            {' | '}
-            <Link
-              href="/"
-              className="text-purple-600 underline hover:text-purple-800"
-            >
-              home
-            </Link>
+            <div className="flex flex-row items-center justify-between">
+              <div>
+                <Link
+                  className="text-purple-600 underline hover:text-purple-800"
+                  href="/blog"
+                >
+                  back
+                </Link>{' '}
+                {' | '}
+                <Link
+                  href="/"
+                  className="text-purple-600 underline hover:text-purple-800"
+                >
+                  home
+                </Link>
+              </div>
+              <span className="text-xl font-bold">
+                {new Date(date).toLocaleDateString('en-US')}
+              </span>
+            </div>
           </div>
           <div className="markdown">
-            <span>{new Date(date).toLocaleDateString('en-US')}</span>
-            <ReactMarkdown>{markdown}</ReactMarkdown>
+            <ReactMarkdown
+              skipHtml={false}
+              rehypePlugins={[rehypeHighlight, rehypeRaw, rehypeSanitize]}
+            >
+              {markdown}
+            </ReactMarkdown>
           </div>
         </div>
       </div>

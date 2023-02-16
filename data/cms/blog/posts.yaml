@@ -1,13 +1,13 @@
 posts:
-  - title: karencat.com
-    description: The time I got chased by lawyers for running a site for my cat.
-    date: 2023-02-12
-    content: karen-cat-dot-com.md
-    id: karen-cat-dot-com
-    seo_image: ''
+  # - title: karencat.com
+  #   description: The time I got chased by lawyers for running a site for my cat.
+  #   date: 2023-02-12
+  #   content: karen-cat-dot-com.md
+  #   id: karen-cat-dot-com
+  #   seo_image: ''
   - title: UVA on 35mm Film
-    description: My first roll shooting around grounds
+    description: I recently got an old, used Canon AE-1 Program film camera. I used it to shoot some 35mm film of the University of Virginia and the surrounding areas. I havn't shot film in a long while, and I was pretty happy with my first roll back.
     date: 2022-04-06
     content: uva-on-film.md
     id: uva-on-film
-    seo_image: http://cdn.nathanleroy.io/images/220524000101740021.jpg
+    seo_image: http://cdn.nathanleroy.io/images/220524000101740015.jpg

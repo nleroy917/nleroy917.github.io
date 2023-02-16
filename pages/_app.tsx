@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import 'highlight.js/styles/github.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import {
   Hydrate,
