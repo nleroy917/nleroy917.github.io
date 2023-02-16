@@ -3,7 +3,7 @@ I took a basic photography class my Sophomore year of high school. It was all 35
 ![University of Virginia Rotunda](https://cdn.nathanleroy.io/images/220524000101740015.jpg)
 <small>_I really liked the angle of this shot. It hides the people and provides a peaceful scene._</small>
 
-![West complex in a May afternoon](http://cdn.nathanleroy.io/images/220524000101740022.jpg)
+![West complex in a May afternoon](https://cdn.nathanleroy.io/images/220524000101740022.jpg)
 <small>_I loved the way the color of the brick turned out on the West Complex. Also, I am not sure where that lady is running._</small>
 
 ![Frys Spring Station](https://cdn.nathanleroy.io/images/220524000101740028.jpg)
