@@ -1,13 +1,20 @@
 @tailwind base;
 
 /*  styles for markdown render */
-.markdown > ul,
-ol {
-  @apply list-disc list-inside;
+.markdown > ul {
+  @apply list-disc;
+  @apply list-inside;
+  @apply mb-3;
+}
+.markdown > ol {
+  @apply list-decimal;
+  @apply list-inside;
+  @apply mb-3;
 }
 .markdown > h1,
 .markdown > h2,
-.markdown > h3 {
+.markdown > h3,
+.markdown > h4 {
   @apply text-purple-600;
 }
 
@@ -19,7 +26,7 @@ ol {
 
 .markdown > h2 {
   @apply text-2xl;
-  @apply: font-bold;
+  @apply font-bold;
   @apply mb-3;
 }
 
@@ -29,7 +36,21 @@ ol {
   @apply mb-3;
 }
 
+.markdown > h4 {
+  @apply text-lg;
+  @apply font-bold;
+  @apply mb-3;
+}
+
 .markdown > p {
+  @apply mb-3;
+}
+
+.markdown > blockquote {
+  @apply pl-2;
+  @apply border-l-4;
+  @apply italic;
+  @apply text-gray-500;
   @apply mb-3;
 }
 
