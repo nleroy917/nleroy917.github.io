@@ -8,7 +8,7 @@
 }
 .markdown > ol {
   @apply list-decimal;
-  @apply list-inside;
+  @apply ml-5;
   @apply mb-3;
 }
 .markdown > h1,
