@@ -109,12 +109,10 @@ const BlogPostPage: NextPage<Props> = (props) => {
                 remarkGfm,
               ]}
               components={{
-                img: ({ alt, src, width, height }) => (
+                img: ({ alt, src }) => (
                   <Image
                     src={src || ''}
                     alt={alt || ''}
-                    width={width || '0'}
-                    height={height || '0'}
                     sizes="100vw"
                     className="w-full h-auto mb-3 border-2 border-purple-500 rounded-md"
                   />
