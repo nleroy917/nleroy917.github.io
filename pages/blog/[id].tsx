@@ -6,8 +6,9 @@ import Link from 'next/link'
 import { getBlogPostData } from '@/utils/cms'
 import { BlogLayout } from '@/components/layout/blog-layout'
 import rehypeHighlight from 'rehype-highlight'
-import rehypeRaw from 'rehype-raw'
 import rehypeSanitize from 'rehype-sanitize'
+import rehypeRaw from 'rehype-raw'
+import remarkGfm from 'remark-gfm'
 import Image from 'next/image'
 
 interface BlogPostMetadata {
@@ -101,16 +102,21 @@ const BlogPostPage: NextPage<Props> = (props) => {
           <div className="markdown">
             <ReactMarkdown
               skipHtml={false}
-              rehypePlugins={[rehypeHighlight, rehypeRaw, rehypeSanitize]}
+              rehypePlugins={[
+                rehypeHighlight,
+                rehypeRaw,
+                rehypeSanitize,
+                remarkGfm,
+              ]}
               components={{
-                img: ({ alt, src }) => (
+                img: ({ alt, src, width, height }) => (
                   <Image
                     src={src || ''}
                     alt={alt || ''}
-                    width="0"
-                    height="0"
+                    width={width || '0'}
+                    height={height || '0'}
                     sizes="100vw"
-                    className="w-full h-auto"
+                    className="w-full h-auto mb-3 border-2 border-purple-500 rounded-md"
                   />
                 ),
               }}

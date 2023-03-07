@@ -9,9 +9,14 @@ const nextConfig = {
         pathname: '/images/*',
       },
       {
+        protocol: 'https',
+        hostname: 'cdn.nathanleroy.io',
+        pathname: '/images/**',
+      },
+      {
         protocol: 'http',
         hostname: 'cdn.nathanleroy.io',
-        pathname: '/images/*',
+        pathname: '/images/**',
       },
     ],
   },
