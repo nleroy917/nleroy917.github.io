@@ -11,7 +11,7 @@ import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
 import Image from 'next/image'
 import { useScroll } from 'framer-motion'
-import { ProgressBar } from './progress'
+import { ProgressBar } from '../../components/blog/progress'
 
 interface BlogPostMetadata {
   title: string
