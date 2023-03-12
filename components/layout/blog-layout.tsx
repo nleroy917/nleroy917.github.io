@@ -13,7 +13,7 @@ export const BlogLayout: FC<Props> = (props) => {
   return (
     <>
       <SEO title={title} description={description} image={image} />
-      <main className="flex flex-col items-center content-center w-full min-h-screen">
+      <main className="flex flex-col items-center content-center w-full min-h-screen mt-2 large:mt-3">
         <div className="w-full p-4 max-w-7xl">{children}</div>
       </main>
     </>

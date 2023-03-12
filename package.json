@@ -19,6 +19,7 @@
     "bootstrap-icons": "^1.10.3",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
+    "framer-motion": "^10.2.4",
     "fs": "^0.0.1-security",
     "js-yaml": "^4.1.0",
     "next": "13.1.6",

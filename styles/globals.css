@@ -62,6 +62,10 @@ a:hover {
   @apply text-purple-800;
 }
 
+.transform-origin-0 {
+  transform-origin: 0%;
+}
+
 /* mobile responsiveness */
 .hidden {
   display: none;

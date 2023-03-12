@@ -10,6 +10,8 @@ import rehypeSanitize from 'rehype-sanitize'
 import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
 import Image from 'next/image'
+import { useScroll } from 'framer-motion'
+import { ProgressBar } from './progress'
 
 interface BlogPostMetadata {
   title: string
@@ -73,58 +75,64 @@ interface Props {
 
 const BlogPostPage: NextPage<Props> = (props) => {
   const { markdown, date, title, seo_image } = props
+  const { scrollYProgress } = useScroll()
   return (
-    <BlogLayout title={title} image={seo_image || undefined}>
-      <div className="flex flex-col items-center p-2">
-        <div className="w-full max-w-4xl">
-          <div className="py-1 mb-3 border-b border-b-gray-200 ">
-            <div className="flex flex-row items-center justify-between">
-              <div>
-                <Link
-                  className="text-purple-600 underline hover:text-purple-800"
-                  href="/blog"
-                >
-                  back
-                </Link>{' '}
-                {' | '}
-                <Link
-                  href="/"
-                  className="text-purple-600 underline hover:text-purple-800"
-                >
-                  home
-                </Link>
+    <>
+      <ProgressBar progress={scrollYProgress} />
+      <BlogLayout title={title} image={seo_image || undefined}>
+        <div className="flex flex-col items-center p-2">
+          <div className="w-full max-w-4xl">
+            <div className="py-1 mb-3 border-b border-b-gray-200 ">
+              <div className="flex flex-row items-center justify-between">
+                <div>
+                  <Link
+                    className="text-purple-600 underline hover:text-purple-800"
+                    href="/blog"
+                  >
+                    back
+                  </Link>{' '}
+                  {' | '}
+                  <Link
+                    href="/"
+                    className="text-purple-600 underline hover:text-purple-800"
+                  >
+                    home
+                  </Link>
+                </div>
+                <span className="text-xl font-bold">
+                  {new Date(date).toLocaleDateString('en-US')}
+                </span>
               </div>
-              <span className="text-xl font-bold">
-                {new Date(date).toLocaleDateString('en-US')}
-              </span>
+            </div>
+            <div className="markdown">
+              <ReactMarkdown
+                skipHtml={false}
+                rehypePlugins={[
+                  rehypeHighlight,
+                  rehypeRaw,
+                  rehypeSanitize,
+                  remarkGfm,
+                ]}
+                components={{
+                  img: ({ alt, src }) => (
+                    <Image
+                      src={src || ''}
+                      alt={alt || ''}
+                      width={1000}
+                      height={1000}
+                      sizes="100vw"
+                      className="w-full h-auto mb-3 border-2 border-purple-500 rounded-md"
+                    />
+                  ),
+                }}
+              >
+                {markdown}
+              </ReactMarkdown>
             </div>
           </div>
-          <div className="markdown">
-            <ReactMarkdown
-              skipHtml={false}
-              rehypePlugins={[
-                rehypeHighlight,
-                rehypeRaw,
-                rehypeSanitize,
-                remarkGfm,
-              ]}
-              components={{
-                img: ({ alt, src }) => (
-                  <Image
-                    src={src || ''}
-                    alt={alt || ''}
-                    sizes="100vw"
-                    className="w-full h-auto mb-3 border-2 border-purple-500 rounded-md"
-                  />
-                ),
-              }}
-            >
-              {markdown}
-            </ReactMarkdown>
-          </div>
         </div>
-      </div>
-    </BlogLayout>
+      </BlogLayout>
+    </>
   )
 }
 
