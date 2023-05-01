@@ -2,23 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cdn.nathanleroy.io',
-        pathname: '/images/*',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cdn.nathanleroy.io',
-        pathname: '/images/**',
-      },
-      {
-        protocol: 'http',
-        hostname: 'cdn.nathanleroy.io',
-        pathname: '/images/**',
-      },
-    ],
+    domains: ["storage.googleapis.com", "cdn.nathanleroy.io"]
   },
 }
 

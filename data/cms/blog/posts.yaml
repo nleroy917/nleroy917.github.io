@@ -10,10 +10,10 @@ posts:
     date: 2022-04-06
     content: uva-on-film.md
     id: uva-on-film
-    seo_image: http://cdn.nathanleroy.io/images/220524000101740015.jpg
+    seo_image: https://storage.googleapis.com/nathanleroy-io-assets/220524000101740015.jpg
   - title: Your frontend's design is (probably) more important than you think
     description: In the complex world of cloud computing and web applications, it's easy to overlook the importance of your frontend client's overall design. Here, I argue that it is often the design of the frontend itself that can lead to the success of your application.
     date: 2023-03-05
     content: beautiful-sites.md
     id: beautiful-sites
-    seo_image: https://cdn.nathanleroy.io/images/website-design/seo.png
+    seo_image: https://storage.googleapis.com/nathanleroy-io-assets/website-design/seo.png
