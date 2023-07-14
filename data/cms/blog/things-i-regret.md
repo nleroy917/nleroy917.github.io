@@ -38,7 +38,7 @@ If you are a JavaScript dev, TypeScript is _really_ easy to learn and the benefi
 
 ## #2 Using GraphQL
 
-I mean what can I say. I saw all the hype on Twitter and Reddit; I wanted a piece of that cake. The app I was building required us to pull a lot of system settings, and as such, I figured a flexible GraphQL endpoint next to the RESTful API we were making would complement things well.
+I mean what can I say. I saw all the hype on Twitter and Reddit; I wanted a piece of that cake. The app I was building required us to regularly pull a lot of system settings, and as such, I figured a flexible GraphQL endpoint next to the RESTful API we were making would complement things well.
 
 **I was wrong.**
 
@@ -91,7 +91,7 @@ I know it's not a huge code save, but the mental load along with the added featu
 
 ## #4 `useEffect` hell
 
-Speaking of `useEffect`, did you know that you [arn't supposed to be using it, like ever?](https://react.dev/learn/you-might-not-need-an-effect) Thats good because I used it nearly **everywhere** in this project. `useEffect` shold actually be called [`useFootGun`](https://youtu.be/HyWYpM_S-2c?t=45) because of the bugs it can unintentionally introduce. I learned hooks right at the dawn of their existence, and I was so excited to use them that I just started using them everywhere. I was told that `useEffect` was the new `componentDidMount`, so I just started using it for everything.
+Speaking of `useEffect`, did you know that you [arn't supposed to be using it, like ever?](https://react.dev/learn/you-might-not-need-an-effect) Thats good because I used it nearly **everywhere** in this project. `useEffect` should actually be called [`useFootGun`](https://youtu.be/HyWYpM_S-2c?t=45) because of the bugs it can unintentionally introduce. I learned hooks right at the dawn of their existence, and I was so excited to use them that I just started using them everywhere. I was told that `useEffect` was the new `componentDidMount`, so I just started using it for everything.
 
 **I was wrong.**
 
