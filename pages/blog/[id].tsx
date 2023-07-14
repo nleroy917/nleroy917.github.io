@@ -12,6 +12,7 @@ import remarkGfm from 'remark-gfm'
 import Image from 'next/image'
 import { useScroll } from 'framer-motion'
 import { ProgressBar } from '../../components/blog/progress'
+import { Tweet } from 'react-tweet'
 
 interface BlogPostMetadata {
   title: string
@@ -74,12 +75,16 @@ interface Props {
 }
 
 const BlogPostPage: NextPage<Props> = (props) => {
-  const { markdown, date, title, seo_image } = props
+  const { markdown, date, title, seo_image, description } = props
   const { scrollYProgress } = useScroll()
   return (
     <>
       <ProgressBar progress={scrollYProgress} />
-      <BlogLayout title={title} image={seo_image || undefined}>
+      <BlogLayout
+        title={title}
+        image={seo_image || undefined}
+        description={description}
+      >
         <div className="flex flex-col items-center p-2">
           <div className="w-full max-w-4xl">
             <div className="py-1 mb-3 border-b border-b-gray-200 ">
@@ -114,16 +119,35 @@ const BlogPostPage: NextPage<Props> = (props) => {
                   remarkGfm,
                 ]}
                 components={{
-                  img: ({ alt, src }) => (
+                  // image rendering - optimized for nextjs
+                  img: ({ alt, src, height, width, className }) => (
                     <Image
                       src={src || ''}
                       alt={alt || ''}
-                      width={1000}
-                      height={1000}
+                      width={(width as number) || 1000}
+                      height={(height as number) || 1000}
                       sizes="100vw"
-                      className="w-full h-auto mb-3 border-2 border-purple-500 rounded-md"
+                      className={
+                        className ||
+                        'w-full h-auto mb-3 border-2 border-purple-500 rounded-md'
+                      }
                     />
                   ),
+                  // tweet rendering
+                  div: ({ id, children }) => {
+                    // if div has id tweet-<id> then render tweet
+                    if (id?.startsWith('user-content-tweet-')) {
+                      // remove user-content-tweet- from id
+                      id = id.replace('user-content-tweet-', '')
+                      return (
+                        <div className="flex flex-row justify-center">
+                          <Tweet id={id} />
+                        </div>
+                      )
+                    } else {
+                      return <div id={id}>{children}</div>
+                    }
+                  },
                 }}
               >
                 {markdown}

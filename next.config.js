@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ["storage.googleapis.com", "cdn.nathanleroy.io"]
   },
+  transpilePackages: ['react-tweet']
 }
 
 module.exports = nextConfig
