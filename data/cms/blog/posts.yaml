@@ -18,8 +18,8 @@ posts:
     id: beautiful-sites
     seo_image: https://storage.googleapis.com/nathanleroy-io-assets/website-design/seo.png
   - title: Things I regret about my first real react project
-    description: Reflecting on my first real react project, I discuss some of the things I wish I had done differently.
-    date: 2023-07-05
+    description: Reflecting on my first real react project.
+    date: 2023-07-14
     content: things-i-regret.md
     id: things-i-regret
     seo_image: https://storage.googleapis.com/nathanleroy-io-assets/images/react-regrets/Spider_Man_meme.jpg

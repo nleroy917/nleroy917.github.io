@@ -11,19 +11,21 @@
 
 > Before one studies Zen, mountains are mountains and waters are waters; after a first glimpse into the truth of Zen, mountains are no longer mountains and waters are no longer waters; after enlightenment, mountains are once again mountains and waters once again waters.
 
+<br />
+
 ## Introduction
 
-I've always said that looking back on old code you've written and cringing a little bit is a sign of growth as a developer.
+Looking back on old code you've written and cringing is a sign of growth as a developer.
 
 > "Who wrote this garbage?"
 
 Oh right, it was me.
 
-Pushing through challenges and reflecting on what works and doesn't work forces you to grow and get better. However, like scrolling through your facebook posts from 2009, it can be a little painful. About two years ago I got contracted out by a friend of a friend to build a web app for a small business. nothing crazy. Some CRUD functions and datatables for internal business use. I'd been using React for about a year, but hadn't necessarily built anything that I would consider **"production ready"**. I was excited to get started and learn a lot. I **did** learn a lot, but I also made a lot of mistakes. As an exercise in reflection, I thought I'd write down some of the things I completely regret about that project.
+Pushing through challenges and reflecting on what works and doesn't work forces you to grow and get better. However, like scrolling through your facebook posts from 2009, it can be painful. About two years ago I got contracted out to build a web app for a small business; nothing crazy, just some CRUD functions and datatables for internal business use. I'd been using React for about a year, but hadn't necessarily built anything that I would consider **production ready**. I was anxious to get start. I was excited to learn. I **did** learn a lot, but I also made a lot of mistakes. As an exercise in reflection, I decided to write down some of the things I completely regret about that project.
 
 ## #1 JavaScript over TypeScript
 
-By and large, the number one mistake I made was using JavaScript over TypeScript. I wouldn't even say I _picked_ JS over TS, I just didn't really know any better. As a lone-wolf developer, TypeScript was on my radar, but I was kind of just ignorant of its potential. Sadly, not even 6 months later I completely re-wrote an old project in TypeScript, and I havn't looked back since. The benefits were clear: TypeScript offers 1) better intellisense, 2) better type safety, and 3) better refactoring.
+By and large, the number one mistake I made was using JavaScript over TypeScript. I wouldn't even say I _picked_ JS over TS, I just didn't really know any better. As a lone-wolf developer, TypeScript was on my radar, but I was kind of just ignorant of its potential. Sadly, not even 6 months later, I completely re-wrote one of my first projects in TypeScript, and I havn't looked back since. The benefits were clear: TypeScript offers 1) better intellisense, 2) better type safety, and 3) better refactoring.
 
 I'm not going to go into detail about why TypeScript is better than JavaScript, but I will say that I truly regret not using it sooner. I think I was just intimidated by the learning curve. I was already learning React, production Flask, and SQL Server. Adding TypeScript to the mix seemed like a lot.
 
@@ -36,17 +38,17 @@ If you are a JavaScript dev, TypeScript is _really_ easy to learn and the benefi
 
 ## #2 Using GraphQL
 
-I mean what can I say, I saw all the hype on Twitter and Reddit - I wanted a piece of that cake. The app I was building required us to pull a lot of system settings, and as such, I figured a flexible GraphQL endpoint next to the RESTful API we were making would complement things well.
+I mean what can I say. I saw all the hype on Twitter and Reddit; I wanted a piece of that cake. The app I was building required us to pull a lot of system settings, and as such, I figured a flexible GraphQL endpoint next to the RESTful API we were making would complement things well.
 
 **I was wrong.**
 
 I am not even exaggerating when I say that I can't understand _half_ the queries I wrote not even two years later with the GraphQL layer I implemented on top of Flask. I mean seriously it _sucks_. I spent three days adding in GraphQL, just to 1) introduce bugs for the next two years, and 2) save myself three queries to the server that has like **maybe 4** active users a day. Cool bro; good job there.
 
-I wish every day to rip out GraphQL and just stick with REST. If you dont believe me, [check out the isuses my lab has had with GraphQL recently](https://github.com/databio/bedhost/issues/59). I promise you: unless you have a very specific reason to be using GraphQL, you probably shouldn't be.
+I wish every day to rip out GraphQL and just stick with REST. If you dont believe me, [check out the isuses my lab has had with GraphQL recently](https://github.com/databio/bedhost/issues/59). I promise you: **unless you have a very specific reason to be using GraphQL, you probably shouldn't be.**
 
 ## #3 Not using `react-query`
 
-I take less personal responsibility for this one. I'm not even sure `react-query` was out when I started building this? Ok, [it was](https://github.com/TanStack/query/commit/08f61bd524c9c2a1544d39e6fbe33ff17fabac7d), but I truly didn't know about this one until it was too late. It's hard to articulate the benefits of `react-query` without just telling you to go use the thing, but I can try with a small example code snippet:
+I take less personal responsibility for this one. I'm not even sure `react-query` was out when I started building this? Ok, [it was](https://github.com/TanStack/query/commit/08f61bd524c9c2a1544d39e6fbe33ff17fabac7d). But I truly didn't know about this one until it was too late. It's hard to articulate the benefits of `react-query` without just telling you to go use the thing, but I can try with a small example code snippet:
 
 ```ts
 // state management
@@ -85,11 +87,11 @@ if (isLoading) return <div>Loading...</div>
 return <div>{data.map((user) => user.login)}</div>
 ```
 
-I know it's not a huge code save, but the mental load along with the added features make this a no-brainer. Ever since adopting `react-query` I've been able to focus on the data I want to render, rather than the loading state. I find myself almost **never** using `useEffect` anymore, and the amount of `useState` calls I make in my codebase has gone down significantly. I can't recommend this library enough.
+I know it's not a huge code save, but the mental load along with the added features make this a no-brainer. Ever since adopting `react-query` I've been able to focus on the data I want to render, rather than the loading state. I find myself almost **never** using `useEffect` anymore, and the amount of `useState` calls I make in my codebase has gone down significantly. I can't recommend this library enough. Also, [tanner](twitter.com/tannerlinsley) is a great guy and deserves your support. Go follow him.
 
 ## #4 `useEffect` hell
 
-Speaking of `useEffect`, did you know that you [arn't supposed to be using it, like ever?](https://react.dev/learn/you-might-not-need-an-effect) Thats good because I used it nearly **everywhere** in this project. `useEffect` shold actually be called `useFootGun` because of the bugs it can unintentionally introduce. I learned hooks right at the dawn of their existence, and I was so excited to use them that I just started using them everywhere. I was told that `useEffect` was the new `componentDidMount`, so I just started using it for everything.
+Speaking of `useEffect`, did you know that you [arn't supposed to be using it, like ever?](https://react.dev/learn/you-might-not-need-an-effect) Thats good because I used it nearly **everywhere** in this project. `useEffect` shold actually be called [`useFootGun`](https://youtu.be/HyWYpM_S-2c?t=45) because of the bugs it can unintentionally introduce. I learned hooks right at the dawn of their existence, and I was so excited to use them that I just started using them everywhere. I was told that `useEffect` was the new `componentDidMount`, so I just started using it for everything.
 
 **I was wrong.**
 

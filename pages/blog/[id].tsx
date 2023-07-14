@@ -5,14 +5,17 @@ import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 import Link from 'next/link'
 import { getBlogPostData } from '@/utils/cms'
 import { BlogLayout } from '@/components/layout/blog-layout'
-import rehypeHighlight from 'rehype-highlight'
-import rehypeSanitize from 'rehype-sanitize'
+// import rehypeHighlight from 'rehype-highlight'
+// import rehypeSanitize from 'rehype-sanitize'
 import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
 import Image from 'next/image'
 import { useScroll } from 'framer-motion'
 import { ProgressBar } from '../../components/blog/progress'
 import { Tweet } from 'react-tweet'
+
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 interface BlogPostMetadata {
   title: string
@@ -112,12 +115,7 @@ const BlogPostPage: NextPage<Props> = (props) => {
             <div className="markdown">
               <ReactMarkdown
                 skipHtml={false}
-                rehypePlugins={[
-                  rehypeHighlight,
-                  rehypeRaw,
-                  rehypeSanitize,
-                  remarkGfm,
-                ]}
+                rehypePlugins={[remarkGfm, rehypeRaw]}
                 components={{
                   // image rendering - optimized for nextjs
                   img: ({ alt, src, height, width, className }) => (
@@ -147,6 +145,24 @@ const BlogPostPage: NextPage<Props> = (props) => {
                     } else {
                       return <div id={id}>{children}</div>
                     }
+                  },
+                  code({ inline, className, children, ...props }) {
+                    const match = /language-(\w+)/.exec(className || '')
+
+                    return !inline && match ? (
+                      <SyntaxHighlighter
+                        {...props}
+                        // eslint-disable-next-line react/no-children-prop
+                        children={String(children).replace(/\n$/, '')}
+                        style={materialDark}
+                        language={match[1]}
+                        PreTag="div"
+                      />
+                    ) : (
+                      <code {...props} className={className}>
+                        {children}
+                      </code>
+                    )
                   },
                 }}
               >
