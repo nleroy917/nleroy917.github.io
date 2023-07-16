@@ -1,14 +1,5 @@
 # The things I regret about my first React project
 
-<!--
-<img
-  alt="Spider man pointing meme"
-  src="https://storage.googleapis.com/nathanleroy-io-assets/images/react-regrets/Spider_Man_meme.jpg"
-  class="w-24 mb-3 border-2 border-purple-500 rounded-md"
-  width="100"
-    height="100"
-/> -->
-
 > Before one studies Zen, mountains are mountains and waters are waters; after a first glimpse into the truth of Zen, mountains are no longer mountains and waters are no longer waters; after enlightenment, mountains are once again mountains and waters once again waters.
 
 <br />
@@ -111,4 +102,4 @@ I realize now that software engineering is a delicate balance between simplicity
 
 Here is a midwit meme to summarize my thoughts:
 
-![midwit meme](https://storage.googleapis.com/nathanleroy-io-assets/images/react-regrets/midwit.jpg)
+![midwit meme](https://imagedelivery.net/4S3ZTnvXbjmDbXox97-K_g/22d056a8-0b16-4b2e-4040-4563c4a37c00/public)

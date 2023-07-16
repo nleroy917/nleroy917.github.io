@@ -10,16 +10,16 @@ posts:
     date: 2022-04-06
     content: uva-on-film.md
     id: uva-on-film
-    seo_image: https://storage.googleapis.com/nathanleroy-io-assets/220524000101740015.jpg
+    seo_image: https://imagedelivery.net/4S3ZTnvXbjmDbXox97-K_g/f1ded56f-13a9-4e51-ad03-ddec9d0c5e00/public
   - title: Your frontend's design is (probably) more important than you think
     description: In the complex world of cloud computing and web applications, it's easy to overlook the importance of your frontend client's overall design. Here, I argue that it is often the design of the frontend itself that can lead to the success of your application.
     date: 2023-03-05
     content: beautiful-sites.md
     id: beautiful-sites
-    seo_image: https://storage.googleapis.com/nathanleroy-io-assets/website-design/seo.png
+    seo_image: https://imagedelivery.net/4S3ZTnvXbjmDbXox97-K_g/a84d142b-d7b4-40b8-c743-361a33c29600/public
   - title: Things I regret about my first real react project
     description: Reflecting on my first real react project.
     date: 2023-07-14
     content: things-i-regret.md
     id: things-i-regret
-    seo_image: https://storage.googleapis.com/nathanleroy-io-assets/images/react-regrets/Spider_Man_meme.jpg
+    seo_image: https://imagedelivery.net/4S3ZTnvXbjmDbXox97-K_g/1a622a07-035a-4731-0846-fab8398ab200/public

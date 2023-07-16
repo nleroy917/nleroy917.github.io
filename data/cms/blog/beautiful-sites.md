@@ -35,13 +35,13 @@ Finally, people are lazy. They dont want to have to _work_ to use your web appli
 
 Take a look at the landing page for the **Gene Expression Omnibus (GEO)** - a popular repository for gene expression data.
 
-![GEO landing page](https://storage.googleapis.com/nathanleroy-io-assets/images/website-design/geo.png)
+![GEO landing page](https://imagedelivery.net/4S3ZTnvXbjmDbXox97-K_g/adfc6293-5677-4b90-be0a-7ce21da68800/public)
 
 Look at all the unused space. The text is very hard to read. The page lacks consistent branding. There is no clear way to navigate the page, and the search bar is small and hard to find. The entire site looks like it is straight out of 2004! It breaks all of the rules: It does not look professionally designed or intuitive, it is not simple with a clear way to navigate, and it does not look easy to use. This is the first impression many people get when landing on the GEO website. I wonder how many people immediately clicked away when landing here.
 
 In contrast, take a look at the landing page for the **Gene Ontology (GO) Resouce** - a popular knowledgebase for gene ontology data:
 
-![GO landing page](https://storage.googleapis.com/nathanleroy-io-assets/images/website-design/go.png)
+![GO landing page](https://imagedelivery.net/4S3ZTnvXbjmDbXox97-K_g/25a1075c-9c2b-44b7-18f0-4f2590826000/public)
 
 While not perfect, it's got almost all the key features. It looks professional and is arranged well, its has a clear navigation bar, the search bar is large, front, and center. This is clearly indicatiing to the user where they should start out. It also just looks easy to use: simply start typing. This is a great first impression that makes the site approachable and engaging.
 
@@ -81,7 +81,7 @@ The best design is the one that is already proven to work. Don't reinvent the wh
 
 This one is the most often looked, in my opinion. Again, as researchers we are busy and don't have the time to make sure our navbar is aligned perfectly. However, I firmly believe that people notice the small details and that they make a big difference. For example, which one of these looks better to you?
 
-<img alt="Example of flex and align-items: center" src="https://storage.googleapis.com/nathanleroy-io-assets/images/website-design/items-center.png" height="250" />
+<img alt="Example of flex and align-items: center" src="https://imagedelivery.net/4S3ZTnvXbjmDbXox97-K_g/9cc69072-ce0b-4329-377d-97713e325d00/public" height="250" />
 
 I think the one perfectly aligned looks better. Your users probably do too. This was achieved with a simple `align-items: center;` in CSS. It's a small detail, but it makes a big difference. Pay attention to the details, and your site will feel so much more approachable and leave a much better impression.
 
