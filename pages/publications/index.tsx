@@ -4,7 +4,7 @@ import { NextPage } from 'next'
 import { Layout } from '@/components/layout/layout'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 import { fetchContent, getPublications } from '@/utils/cms'
-import { PublicationCard } from './publication'
+import { PublicationCard } from '../../components/publications/publication'
 
 export type Publication = {
   title: string

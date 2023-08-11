@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Publication } from '.'
+import { Publication } from '../../pages/publications'
 
 type PublicationCardProps = {
   entry: Publication
