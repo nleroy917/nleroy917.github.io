@@ -1,0 +1,113 @@
+- id: LeRoy2023scEmbed
+  type: misc
+  title: 'Fast clustering and cell-type annotation of scATAC data using pre-trained embeddings'
+  shorttitle: 'scEmbed'
+  authors:
+    - Nathan J. LeRoy
+    - Jason P. Smith
+    - Guangtao Zheng
+    - Julia Rymuza
+    - Erfaneh Gharavi
+    - Donald E. Brown
+    - Aidong Zhang
+    - Nathan C. Sheffield
+  year: 2023
+  month: July
+  journal: 'bioRxiv'
+  doi: 'https://doi.org/10.1101/2023.08.01.551452'
+
+- id: LeRoy2023
+  type: misc
+  title: 'Optipyzer: A Fast and Flexible Multi-Species Codon Optimization Server'
+  shorttitle: 'Optipyzer'
+  authors:
+    - Nathan J. LeRoy
+    - Caleigh Roleck
+  year: 2023
+  month: May
+  primaryclass: New Results
+  pages: '2023.05.22.541759'
+  publisher: 'bioRxiv'
+  journal: 'bioRxiv'
+  doi: '10.1101/2023.05.22.541759'
+  urldate: '2023-05-27'
+  archiveprefix: 'bioRxiv'
+  chapter: 'New Results'
+  langid: english
+
+- id: Rymuza2023
+  type: misc
+  title: 'Methods for constructing and evaluating consensus genomic interval sets'
+  shorttitle: 'HMM universes'
+  authors:
+    - Julia Rymuza
+    - Yuchen Sun
+    - Guangtao Zheng
+    - Nathan J. LeRoy
+    - Maria Murach
+    - Neil Phan
+    - Aidong Zhang
+    - Nathan C. Sheffield
+  year: 2023
+  month: August
+  journal: 'bioRxiv'
+  doi: 'https://doi.org/10.1101/2023.08.03.551899'
+
+- id: Sheffield2023
+  type: article
+  title: 'Challenges to Sharing Sample Metadata in Computational Genomics'
+  authors:
+    - Nathan Sheffield
+    - Nathan J. LeRoy
+    - Oleksandr Khoroshevskyi
+  year: 2023
+  month: March
+  journal: 'Frontiers in Genetics'
+  volume: 14
+  issn: '1664-8021'
+  doi: 'https://doi.org/10.3389/fgene.2023.1155809'
+  url: 'https://www.frontiersin.org/articles/10.3389/fgene.2023.1154198'
+  urldate: '2023-05-16'
+
+- id: Khoroshevskyi2023
+  type: article
+  title: 'GEOfetch: A Command-Line Tool for Downloading Data and Standardized Metadata from GEO and SRA'
+  shorttitle: 'GEOfetch'
+  authors:
+    - Oleksandr Khoroshevskyi
+    - Nathan J. LeRoy
+    - Vincent P Reuter
+    - Nathan C Sheffield
+  year: 2023
+  month: March
+  journal: 'Bioinformatics'
+  pages: 'btad069'
+  issn: '1367-4811'
+  doi: '10.1093/bioinformatics/btad069'
+
+- id: Radhakrishnan2020
+  type: article
+  title: 'Neuron Activity Dependent Redox Compartmentation Revealed with a Second Generation Red-Shifted Ratiometric Sensor'
+  authors:
+    - Saranya Radhakrishnan
+    - Jacob Norley
+    - Stefan Wendt
+    - Nathan J. LeRoy
+    - Hana Hall
+    - Stevie Norcross
+    - Sara Doan
+    - Jordan Snaider
+    - Brian A MacVicar
+    - Vikki M Weake
+    - Libai Huang
+    - Mathew Tantama
+  year: 2020
+  month: September
+  journal: 'ACS Chemical Neuroscience'
+  volume: 11
+  number: 17
+  pages: '2666--2678'
+  publisher: 'American Chemical Society'
+  doi: '10.1021/acschemneuro.0c00342'
+  abstract: >
+    Oxidative stress is a hallmark of several aging and trauma related neurological disorders, but the precise details of how altered neuronal activity elicits subcellular redox changes have remained difficult to resolve. Current redox sensitive dyes and fluorescent proteins can quantify spatially distinct changes in reactive oxygen species levels, but multicolor probes are needed to accurately analyze compartment-specific redox dynamics in single cells that can be masked by population averaging. We previously engineered genetically encoded red-shifted redox-sensitive fluorescent protein sensors using a Förster resonance energy transfer relay strategy. Here, we developed a second-generation excitation ratiometric sensor called rogRFP2 with improved red emission for quantitative live-cell imaging. Using this sensor to measure activity-dependent redox changes in individual cultured neurons, we observed an anticorrelation in which mitochondrial oxidation was accompanied by a concurrent reduction in the cytosol. This behavior was dependent on the activity of Complex I of the mitochondrial electron transport chain and could be modulated by the presence of cocultured astrocytes. We also demonstrated that the red fluorescent rogRFP2 facilitates ratiometric one- and two-photon redox imaging in rat brain slices and Drosophila retinas. Overall, the proof-of-concept studies reported here demonstrate that this new rogRFP2 redox sensor can be a powerful tool for understanding redox biology both in vitro and in vivo across model organisms.

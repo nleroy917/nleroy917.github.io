@@ -1,5 +1,5 @@
 import { BlogPostsMetadata } from '@/pages/blog'
-import { parseBibFile } from 'bibtex'
+import { Publication } from '@/pages/publications'
 import fs from 'fs'
 import yaml from 'js-yaml'
 
@@ -23,11 +23,9 @@ export const getSoftware = (): Software => {
 }
 
 export const getPublications = () => {
-  const bibFile = fs.readFileSync(
-    './data/cms/publications/bibliography.bib',
-    'utf-8'
-  )
-  const publications = parseBibFile(bibFile)
+  const publications = yaml.load(
+    fs.readFileSync('./data/cms/publications/pubs.yaml', 'utf-8')
+  ) as Publication[]
   return publications
 }
 
