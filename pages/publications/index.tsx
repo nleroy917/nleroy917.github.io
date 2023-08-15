@@ -5,6 +5,7 @@ import { Layout } from '@/components/layout/layout'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 import { fetchContent, getPublications } from '@/utils/cms'
 import { PublicationCard } from '../../components/publications/publication'
+import Link from 'next/link'
 
 export type Publication = {
   title: string
@@ -33,13 +34,19 @@ interface Props {
 const Publications: NextPage<Props> = ({ markdown, publications }) => {
   return (
     <Layout>
-      <div className="markdown">
+      <div className="border-b border-gray-400 markdown">
         <ReactMarkdown>{markdown}</ReactMarkdown>
       </div>
-      <div className="flex flex-col items-center justify-center w-full gap-3">
+      <div className="flex flex-col items-center justify-center w-full gap-3 py-6">
         {publications.map((entry) => {
           return (
-            <PublicationCard entry={entry} key={entry.id}></PublicationCard>
+            <Link
+              className="w-full no-underline"
+              key={entry.doi}
+              href={entry.doi}
+            >
+              <PublicationCard entry={entry}></PublicationCard>
+            </Link>
           )
         })}
       </div>

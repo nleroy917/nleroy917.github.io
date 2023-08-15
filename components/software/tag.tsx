@@ -24,6 +24,18 @@ const TagProperties: Record<string, TagProperties> = {
     class:
       'text-sm border px-2 py-0 border-cyan-600 text-cyan-600 rounded-full',
   },
+  javascript: {
+    class:
+      'text-sm border px-2 py-0 border-yellow-600 text-yellow-600 rounded-full',
+  },
+  typescript: {
+    class:
+      'text-sm border px-2 py-0 border-blue-600 text-blue-600 rounded-full',
+  },
+  'machine learning': {
+    class:
+      'text-sm border px-2 py-0 border-purple-600 text-purple-600 rounded-full',
+  },
 }
 
 export const Tag: FC<Props> = ({ tag }) => {

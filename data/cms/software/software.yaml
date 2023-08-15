@@ -1,4 +1,20 @@
 software:
+  - name: PEPhub
+    github: https://github.com/pepkit/pephub
+    description: Open sourced biological metadata server that promotes sharing and reproduction of sample-intensive experiments.
+    registry: pepkit/pephub
+    tags:
+      - python
+      - typescript
+      - bioinformatics
+  - name: geniml
+    github: https://github.com/databio/geniml
+    description: A python package for working with and training machine learning models on genomic data.
+    registry: databio/geniml
+    tags:
+      - python
+      - bioinformatics
+      - machine learning
   - name: optipyzer
     github: https://github.com/nleroy917/optipyzer
     description: Multi-species codon optimization server written in python.
@@ -12,11 +28,4 @@ software:
     registry: nleroy917/spottydata
     tags:
       - python
-      - web
-  - name: threeo1
-    github: https://github.com/nleroy917/threeo1
-    description: URL shortening service written in Go
-    registry: nleroy917/threeo1
-    tags:
-      - go
       - web

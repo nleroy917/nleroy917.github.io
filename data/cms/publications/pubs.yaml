@@ -29,7 +29,7 @@
   pages: '2023.05.22.541759'
   publisher: 'bioRxiv'
   journal: 'bioRxiv'
-  doi: '10.1101/2023.05.22.541759'
+  doi: 'https://doi.org/10.1101/2023.05.22.541759'
   urldate: '2023-05-27'
   archiveprefix: 'bioRxiv'
   chapter: 'New Results'
@@ -83,7 +83,7 @@
   journal: 'Bioinformatics'
   pages: 'btad069'
   issn: '1367-4811'
-  doi: '10.1093/bioinformatics/btad069'
+  doi: 'https://doi.org/10.1093/bioinformatics/btad069'
 
 - id: Radhakrishnan2020
   type: article
@@ -108,6 +108,6 @@
   number: 17
   pages: '2666--2678'
   publisher: 'American Chemical Society'
-  doi: '10.1021/acschemneuro.0c00342'
+  doi: 'https://doi.org/10.1021/acschemneuro.0c00342'
   abstract: >
     Oxidative stress is a hallmark of several aging and trauma related neurological disorders, but the precise details of how altered neuronal activity elicits subcellular redox changes have remained difficult to resolve. Current redox sensitive dyes and fluorescent proteins can quantify spatially distinct changes in reactive oxygen species levels, but multicolor probes are needed to accurately analyze compartment-specific redox dynamics in single cells that can be masked by population averaging. We previously engineered genetically encoded red-shifted redox-sensitive fluorescent protein sensors using a Förster resonance energy transfer relay strategy. Here, we developed a second-generation excitation ratiometric sensor called rogRFP2 with improved red emission for quantitative live-cell imaging. Using this sensor to measure activity-dependent redox changes in individual cultured neurons, we observed an anticorrelation in which mitochondrial oxidation was accompanied by a concurrent reduction in the cytosol. This behavior was dependent on the activity of Complex I of the mitochondrial electron transport chain and could be modulated by the presence of cocultured astrocytes. We also demonstrated that the red fluorescent rogRFP2 facilitates ratiometric one- and two-photon redox imaging in rat brain slices and Drosophila retinas. Overall, the proof-of-concept studies reported here demonstrate that this new rogRFP2 redox sensor can be a powerful tool for understanding redox biology both in vitro and in vivo across model organisms.

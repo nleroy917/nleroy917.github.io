@@ -51,6 +51,14 @@ export const HamburgerMenu: FC = () => {
               blog
             </Link>
           </li>
+          <li className="my-1 font-bold">
+            <Link
+              className="text-black underline"
+              href="https://github.com/nleroy917"
+            >
+              github
+            </Link>
+          </li>
           {/* <li className="my-1 font-bold">
             <Link className="text-black underline" href="/">
               resume

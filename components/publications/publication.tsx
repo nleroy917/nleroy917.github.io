@@ -36,7 +36,7 @@ export const PublicationCard: FC<PublicationCardProps> = ({ entry }) => {
   return (
     <div
       key={entry.id}
-      className="w-full p-2 bg-purple-100 border-2 border-black rounded-md"
+      className="text-black w-full p-2 bg-purple-100 border-2 border-black rounded-md shadow-sm hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition-all"
     >
       <h2 className="text-base font-bold lg:text-lg">{entry.title}</h2>
       <p className="text-sm lg:text-base">

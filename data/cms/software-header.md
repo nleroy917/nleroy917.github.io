@@ -1,1 +1,1 @@
-Some links to some software that was written by me.
+Some links to software that was written by myself and my lab.

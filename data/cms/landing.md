@@ -1,9 +1,9 @@
 ## Bio
 
-My name is Nathan and I am a 2nd year PhD candidate at the [University of Virginia](https://engineering.virginia.edu/departments/biomedical-engineering). Born and raised in Cincinnati, OH, I have a passion for science and technology that was nurtured from a young age.
+My name is Nathan and I am a 3rd year PhD candidate at the [University of Virginia](https://engineering.virginia.edu/departments/biomedical-engineering). Born and raised in Cincinnati, OH, I have a passion for science and technology that was nurtured from a young age.
 
 I studied biological engineering at [Purdue University](https://engineering.purdue.edu/ABE). At Purdue, I worked under Dr. Mathew Tantama to develop fluorescent protein-based sensors that can be used with live-cell microscopy to visualize and quantify cellular physiology. After graduation, I worked for the [Indiana Biosciences Research Institute](https://www.indianabiosciences.org/) as a research associate, where I helped engineer new antibodies for use in substance abuse research.
 
-Currently, I am a graduate student in [the lab of Dr. Nathan Sheffield](https://databio.org/). My research leverages techniques in natural language processing and interpretable machine learning to study gene regulation and single-cell epigenetic datasets. As a seasoned Python developer with a passion for web programming and development, I am always seeking new opportunities to challenge myself and expand my skills.
+Currently, I am a graduate student in [the lab of Dr. Nathan Sheffield](https://databio.org/). My research leverages techniques in natural language processing and interpretable machine learning to study gene regulation and single-cell epigenetic datasets. As a seasoned developer with a passion for web programming and development, I am always seeking new opportunities to challenge myself and expand my skills. **I am particularly passionate about developing accessible and intuitive software for use in the broader scientific community.**
 
 When I'm not studying or coding, you can find me out on a run, hiking in the great outdoors, or capturing memories through photography.
