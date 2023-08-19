@@ -16,6 +16,22 @@
   journal: 'bioRxiv'
   doi: 'https://doi.org/10.1101/2023.08.01.551452'
 
+- id: LeRoy2023pephub
+  type: misc
+  title: 'PEPhub: a database, web interface, and API for editing, sharing, and validating biological sample metadata'
+  shorttitle: 'PEPhub'
+  authors:
+    - Nathan J. LeRoy
+    - Oleksandr Khoroshevskyi
+    - Aaron O'Brien
+    - Rafal Stepien
+    - Alip Arslan
+    - Nathan C. Sheffield
+  year: 2023
+  month: August
+  journal: 'bioRxiv'
+  doi: https://doi.org/10.1101/2023.08.15.551388
+
 - id: LeRoy2023
   type: misc
   title: 'Optipyzer: A Fast and Flexible Multi-Species Codon Optimization Server'
