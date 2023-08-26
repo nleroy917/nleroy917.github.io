@@ -23,7 +23,7 @@ interface Props {
 const Software: NextPage<Props> = ({ markdown, software }) => {
   return (
     <Layout>
-      <h1 className="text-3xl font-bold text-purple-600">My Software</h1>
+      <h2 className="text-4xl font-bold text-purple-600">My Software</h2>
       <div className="border-b border-gray-400 markdown">
         <ReactMarkdown>{markdown}</ReactMarkdown>
       </div>

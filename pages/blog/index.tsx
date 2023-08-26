@@ -56,7 +56,7 @@ const Blog: NextPage<Props> = ({ blogHeadMarkdown, posts }) => {
         })
         .map((post) => {
           return (
-            <PostCard key={post.id}>
+            <PostCard href={`/blog/${post.id}`} key={post.id}>
               <div className="flex flex-row items-center justify-between w-full mb-2">
                 <div>
                   <Link className="no-underline" href={`/blog/${post.id}`}>

@@ -51,6 +51,22 @@
   chapter: 'New Results'
   langid: english
 
+- id: Gharavi2023
+  type: misc
+  title: 'Joint representation learning for retrieval and annotation of genomic interval sets'
+  shorttitle: 'bedspace'
+  authors:
+    - Erfaneh Gharavi
+    - Nathan J. LeRoy
+    - Guangtao Zheng
+    - Aidong Zhang
+    - Donald E. Brown
+    - Nathan C. Sheffield
+  year: 2023
+  month: August
+  journal: 'bioRxiv'
+  doi: 'https://doi.org/10.1101/2023.08.21.554131'
+
 - id: Rymuza2023
   type: misc
   title: 'Methods for constructing and evaluating consensus genomic interval sets'
