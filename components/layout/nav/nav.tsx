@@ -32,7 +32,10 @@ export const Nav: FC = () => {
       </div>
       <div className="hidden lg:flex ">
         <Link href="https://github.com/nleroy917">
-          <i className="text-4xl text-black transition-all bi bi-github hover:text-gray-800"></i>
+          <i
+            className="text-4xl text-black transition-all bi bi-github hover:text-gray-800"
+            aria-label="GitHub"
+          ></i>
         </Link>
       </div>
     </nav>
