@@ -22,7 +22,7 @@ const Home: NextPage<Props> = ({ markdown }) => {
       <div className="markdown">
         <ReactMarkdown>{markdown}</ReactMarkdown>
       </div>
-      <h2 className="mb-3 text-2xl font-bold text-purple-600">My Socials</h2>
+      <h2 className="mb-3 text-2xl font-bold text-indigo-600">My Socials</h2>
       <ul className="list-disc list-inside">
         <li>
           <i className="mr-1 bi bi-github"></i>

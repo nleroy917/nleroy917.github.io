@@ -94,7 +94,7 @@ const BlogPostPage: NextPage<Props> = (props) => {
               <div className="flex flex-row items-center justify-between">
                 <div>
                   <Link
-                    className="text-purple-600 underline hover:text-purple-800"
+                    className="text-indigo-600 underline hover:text-indigo-800"
                     href="/blog"
                   >
                     back
@@ -102,7 +102,7 @@ const BlogPostPage: NextPage<Props> = (props) => {
                   {' | '}
                   <Link
                     href="/"
-                    className="text-purple-600 underline hover:text-purple-800"
+                    className="text-indigo-600 underline hover:text-indigo-800"
                   >
                     home
                   </Link>
@@ -127,7 +127,7 @@ const BlogPostPage: NextPage<Props> = (props) => {
                       sizes="100vw"
                       className={
                         className ||
-                        'w-full h-auto mb-3 border-2 border-purple-500 rounded-md'
+                        'w-full h-auto mb-3 border-2 border-indigo-500 rounded-md'
                       }
                     />
                   ),

@@ -34,7 +34,7 @@ const TagProperties: Record<string, TagProperties> = {
   },
   'machine learning': {
     class:
-      'text-sm border px-2 py-0 border-purple-600 text-purple-600 rounded-full',
+      'text-sm border px-2 py-0 border-indigo-600 text-indigo-600 rounded-full',
   },
 }
 

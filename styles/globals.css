@@ -1,7 +1,7 @@
 @tailwind base;
 
 .markdown > p > strong {
-  @apply text-purple-600;
+  @apply text-indigo-600;
 }
 
 /*  styles for markdown render */
@@ -19,7 +19,7 @@
 .markdown > h2,
 .markdown > h3,
 .markdown > h4 {
-  @apply text-purple-600;
+  @apply text-indigo-600;
 }
 
 .markdown > h1 {
@@ -59,11 +59,11 @@
 }
 
 a {
-  @apply text-purple-600;
+  @apply text-indigo-600;
   @apply underline;
 }
 a:hover {
-  @apply text-purple-800;
+  @apply text-indigo-800;
 }
 
 .transform-origin-0 {

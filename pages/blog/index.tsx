@@ -60,12 +60,12 @@ const Blog: NextPage<Props> = ({ blogHeadMarkdown, posts }) => {
               <div className="flex flex-row items-center justify-between w-full mb-2">
                 <div>
                   <Link className="no-underline" href={`/blog/${post.id}`}>
-                    <h2 className="mb-0 text-lg font-bold text-purple-500 hover:underline">
+                    <h2 className="mb-0 text-lg font-bold text-indigo-500 hover:underline">
                       {post.title}
                     </h2>
                   </Link>
                 </div>
-                <div className="text-lg text-purple-600">
+                <div className="text-lg text-indigo-600">
                   {new Date(post.date).toLocaleDateString()}
                 </div>
               </div>
