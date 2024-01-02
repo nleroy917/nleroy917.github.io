@@ -47,7 +47,7 @@ interface Props {
 const Blog: NextPage<Props> = ({ blogHeadMarkdown, posts }) => {
   return (
     <Layout title="Blog" description="Nathan LeRoy's Blog">
-      <div className="mt-3 mb-5">
+      <div className="border-b border-gray-400 markdown">
         <ReactMarkdown>{blogHeadMarkdown}</ReactMarkdown>
       </div>
       {posts

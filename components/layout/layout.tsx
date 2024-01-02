@@ -18,7 +18,7 @@ export const Layout: FC<Props> = (props) => {
         <header className="w-full">
           <Nav />
         </header>
-        <div className="w-full p-4 max-w-7xl">{children}</div>
+        <div className="w-full max-w-6xl p-4">{children}</div>
       </main>
     </>
   )
