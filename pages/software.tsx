@@ -1,7 +1,7 @@
 import { Layout } from '@/components/layout/layout'
 import { SoftwareCard } from '@/components/software/software-entry'
-import { fetchContent, getSoftware, Software } from '@/utils/cms'
-import { NextPage } from 'next'
+import { fetchContent, getSoftware, type Software } from '@/utils/cms'
+import { InferGetStaticPropsType, NextPage } from 'next'
 import Link from 'next/link'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 
@@ -15,12 +15,10 @@ export const getStaticProps = () => {
   }
 }
 
-interface Props {
-  markdown: string
-  software: Software
-}
-
-const Software: NextPage<Props> = ({ markdown, software }) => {
+const Software: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  markdown,
+  software,
+}) => {
   return (
     <Layout>
       <h2 className="text-4xl font-bold text-indigo-600">My Software</h2>

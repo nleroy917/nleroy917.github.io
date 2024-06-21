@@ -1,0 +1,22 @@
+books:
+  - id: 1
+    title: The comfort crisis
+    author: Michael Easter
+    year: 2021
+    genre: non-fiction
+    goodreads_review: 'https://www.goodreads.com/review/show/5867131912'
+    goodreads_number_of_stars: 5
+  - id: 2
+    title: Project Hail Mary
+    author: Andy Weir
+    year: 2021
+    genre: science fiction
+    goodreads_review: 'https://www.goodreads.com/review/show/6238306348?type=review#rating_692965911'
+    goodreads_number_of_stars: 4
+  - id: 3
+    title: Dune
+    author: Frank Herbert
+    year: 1965
+    genre: science fiction
+    goodreads_review: ''
+    goodreads_number_of_stars: 4

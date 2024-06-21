@@ -15,6 +15,33 @@ export interface Software {
   software: SoftwareEntry[]
 }
 
+export interface Album {
+  id: number
+  title: string
+  artist: string
+  year: number
+  genre: string
+  spotify_album_id: string
+}
+
+export interface Music {
+  albums: Album[]
+}
+
+export interface Book {
+  id: number
+  title: string
+  author: string
+  year: number
+  genre: string
+  goodreads_review: string
+  goodreads_number_of_stars: number
+}
+
+export interface Books {
+  books: Book[]
+}
+
 export const getSoftware = (): Software => {
   const software = yaml.load(
     fs.readFileSync('./data/cms/software/software.yaml', 'utf-8')
@@ -46,4 +73,18 @@ export const getBlogPostData = (id: string) => {
   const post = posts.find((post) => post.id === id)
   const markdown = fetchContent(`./data/cms/blog/${id}.md`)
   return { ...post, markdown }
+}
+
+export const getMusic = () => {
+  const music = yaml.load(
+    fs.readFileSync('./data/cms/interests/music.yaml', 'utf-8')
+  ) as Music
+  return music
+}
+
+export const getBooks = () => {
+  const books = yaml.load(
+    fs.readFileSync('./data/cms/interests/books.yaml', 'utf-8')
+  ) as Books
+  return books
 }

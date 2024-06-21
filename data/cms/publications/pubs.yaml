@@ -16,6 +16,36 @@
   journal: 'bioRxiv'
   doi: 'https://doi.org/10.1101/2023.08.01.551452'
 
+- id: Gharavi2023
+  type: misc
+  title: 'Joint representation learning for retrieval and annotation of genomic interval sets'
+  shorttitle: 'bedspace'
+  authors:
+    - Erfaneh Gharavi
+    - Nathan J. LeRoy
+    - Guangtao Zheng
+    - Aidong Zhang
+    - Donald E. Brown
+    - Nathan C. Sheffield
+  year: 2024
+  month: August
+  journal: 'Bioengineering'
+  doi: 'https://doi.org/10.3390/bioengineering11030263'
+
+- id: deepGSEA
+  type: misc
+  title: "DeepGSEA: Explainable Deep Gene Set Enrichment Analysis for Single-cell Transcriptomic Data"
+  shorttitle: "DeepGSEA"
+  authors:
+    - Guangzhi Xiong
+    - Nathan J. LeRoy
+    - Stefan Bekiranov
+    - Aidong Zhang
+  year: 2024
+  journal: 'Bioinformatics'
+  doi: https://doi.org/10.1101/2023.11.03.565235 
+
+
 - id: LeRoy2023pephub
   type: misc
   title: 'PEPhub: a database, web interface, and API for editing, sharing, and validating biological sample metadata'
@@ -27,10 +57,10 @@
     - Rafal Stepien
     - Alip Arslan
     - Nathan C. Sheffield
-  year: 2023
+  year: 2024
   month: August
-  journal: 'bioRxiv'
-  doi: https://doi.org/10.1101/2023.08.15.551388
+  journal: 'GigaScience'
+  doi: https://doi.org/10.1093/gigascience/giae033
 
 - id: LeRoy2023
   type: misc
@@ -50,22 +80,6 @@
   archiveprefix: 'bioRxiv'
   chapter: 'New Results'
   langid: english
-
-- id: Gharavi2023
-  type: misc
-  title: 'Joint representation learning for retrieval and annotation of genomic interval sets'
-  shorttitle: 'bedspace'
-  authors:
-    - Erfaneh Gharavi
-    - Nathan J. LeRoy
-    - Guangtao Zheng
-    - Aidong Zhang
-    - Donald E. Brown
-    - Nathan C. Sheffield
-  year: 2023
-  month: August
-  journal: 'bioRxiv'
-  doi: 'https://doi.org/10.1101/2023.08.21.554131'
 
 - id: Rymuza2023
   type: misc
