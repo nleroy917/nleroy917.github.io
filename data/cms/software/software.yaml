@@ -1,4 +1,18 @@
 software:
+  - name: textractor
+    github: https://github.com/nleroy917/textractor
+    description: A rust crate for extracting text from various file types. Includes wasm bindings for in-browser use.
+    registry: nleroy917/textractor
+    tags:
+      - rust
+      - typescript
+  - name: gtars
+    github: https://github.com/databio/gtars
+    description: A Rust library for performance-critical genomic interval operations.
+    registry: databio/gtars
+    tags:
+      - rust
+      - bioinformatics
   - name: PEPhub
     github: https://github.com/pepkit/pephub
     description: Open sourced biological metadata server that promotes sharing and reproduction of sample-intensive experiments.

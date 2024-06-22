@@ -26,28 +26,10 @@ const Interests: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   return (
     <Layout>
-      <div className="border-b border-gray-400 markdown">
-        <ReactMarkdown>{musicMarkdown}</ReactMarkdown>
-      </div>
-      <div className="flex flex-col mt-2 md:grid md:grid-cols-3 md:gap-4">
-        {music.albums.map((album) => (
-          <div
-            key={album.id}
-            className="p-2 border-2 border-black shadow-md rounded-xl"
-          >
-            <div className="flex flex-row items-center justify-between">
-              <h2 className="mb-0 text-2xl font-bold">{album.title}</h2>
-              <GenreTag genre={album.genre} />
-            </div>
-            <h3 className="mb-1 italic">{album.artist}</h3>
-            <SpotifyAlbumPreview albumId={album.spotify_album_id} />
-          </div>
-        ))}
-      </div>
       <div className="mt-4 border-b border-gray-400 markdown">
         <ReactMarkdown>{bookMarkdown}</ReactMarkdown>
       </div>
-      <div className="flex flex-col mb-24">
+      <div className="flex flex-col mb-8">
         <ul>
           {books.books.map((book) => (
             <li key={book.id} className="p-2">
@@ -77,6 +59,24 @@ const Interests: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             </li>
           ))}
         </ul>
+      </div>
+      <div className="border-b border-gray-400 markdown">
+        <ReactMarkdown>{musicMarkdown}</ReactMarkdown>
+      </div>
+      <div className="flex flex-col mt-2 md:grid md:grid-cols-3 md:gap-4">
+        {music.albums.map((album) => (
+          <div
+            key={album.id}
+            className="p-2 my-2 border-2 border-black shadow-md md:my-0 rounded-xl"
+          >
+            <div className="flex flex-row items-center justify-between">
+              <h2 className="mb-0 text-2xl font-bold">{album.title}</h2>
+              <GenreTag genre={album.genre} />
+            </div>
+            <h3 className="mb-1 italic">{album.artist}</h3>
+            <SpotifyAlbumPreview albumId={album.spotify_album_id} />
+          </div>
+        ))}
       </div>
     </Layout>
   )

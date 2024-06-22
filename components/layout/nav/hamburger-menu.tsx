@@ -1,6 +1,6 @@
 import { useOnClickOutside } from '@/hooks/useOnClickOutside'
 import Link from 'next/link'
-import { FC, useState, useRef } from 'react'
+import { FC, useState, useRef, Fragment } from 'react'
 
 export const HamburgerMenu: FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -9,7 +9,7 @@ export const HamburgerMenu: FC = () => {
   useOnClickOutside(menuRef, () => setIsOpen(false), [buttonRef])
 
   return (
-    <>
+    <Fragment>
       <button
         ref={buttonRef}
         className="block lg:hidden"
@@ -59,6 +59,11 @@ export const HamburgerMenu: FC = () => {
               github
             </Link>
           </li>
+          <li className="my-1 font-bold">
+            <Link className="text-black underline" href="/music-and-books">
+              music & books
+            </Link>
+          </li>
           {/* <li className="my-1 font-bold">
             <Link className="text-black underline" href="/">
               resume
@@ -66,6 +71,6 @@ export const HamburgerMenu: FC = () => {
           </li> */}
         </ul>
       </div>
-    </>
+    </Fragment>
   )
 }

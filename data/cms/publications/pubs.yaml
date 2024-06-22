@@ -1,6 +1,6 @@
 - id: LeRoy2023scEmbed
   type: misc
-  title: 'Fast clustering and cell-type annotation of scATAC data using pre-trained embeddings'
+  title: 'Fast clustering and cell-type annotation of scATAC data using pre-trained region embeddings'
   shorttitle: 'scEmbed'
   authors:
     - Nathan J. LeRoy
@@ -11,40 +11,10 @@
     - Donald E. Brown
     - Aidong Zhang
     - Nathan C. Sheffield
-  year: 2023
+  year: 2024
   month: July
-  journal: 'bioRxiv'
-  doi: 'https://doi.org/10.1101/2023.08.01.551452'
-
-- id: Gharavi2023
-  type: misc
-  title: 'Joint representation learning for retrieval and annotation of genomic interval sets'
-  shorttitle: 'bedspace'
-  authors:
-    - Erfaneh Gharavi
-    - Nathan J. LeRoy
-    - Guangtao Zheng
-    - Aidong Zhang
-    - Donald E. Brown
-    - Nathan C. Sheffield
-  year: 2024
-  month: August
-  journal: 'Bioengineering'
-  doi: 'https://doi.org/10.3390/bioengineering11030263'
-
-- id: deepGSEA
-  type: misc
-  title: "DeepGSEA: Explainable Deep Gene Set Enrichment Analysis for Single-cell Transcriptomic Data"
-  shorttitle: "DeepGSEA"
-  authors:
-    - Guangzhi Xiong
-    - Nathan J. LeRoy
-    - Stefan Bekiranov
-    - Aidong Zhang
-  year: 2024
-  journal: 'Bioinformatics'
-  doi: https://doi.org/10.1101/2023.11.03.565235 
-
+  journal: 'Nuceic Acids Research Genomics and Bioinformatics'
+  doi: 'https://doi.org/10.1093/nargab/lqae073'
 
 - id: LeRoy2023pephub
   type: misc
@@ -80,6 +50,35 @@
   archiveprefix: 'bioRxiv'
   chapter: 'New Results'
   langid: english
+
+- id: Gharavi2023
+  type: misc
+  title: 'Joint representation learning for retrieval and annotation of genomic interval sets'
+  shorttitle: 'bedspace'
+  authors:
+    - Erfaneh Gharavi
+    - Nathan J. LeRoy
+    - Guangtao Zheng
+    - Aidong Zhang
+    - Donald E. Brown
+    - Nathan C. Sheffield
+  year: 2024
+  month: August
+  journal: 'Bioengineering'
+  doi: 'https://doi.org/10.3390/bioengineering11030263'
+
+- id: deepGSEA
+  type: misc
+  title: 'DeepGSEA: Explainable Deep Gene Set Enrichment Analysis for Single-cell Transcriptomic Data'
+  shorttitle: 'DeepGSEA'
+  authors:
+    - Guangzhi Xiong
+    - Nathan J. LeRoy
+    - Stefan Bekiranov
+    - Aidong Zhang
+  year: 2024
+  journal: 'Bioinformatics'
+  doi: https://doi.org/10.1101/2023.11.03.565235
 
 - id: Rymuza2023
   type: misc

@@ -13,6 +13,10 @@ const TagProperties: Record<string, TagProperties> = {
     class:
       'text-sm border px-2 py-0 border-blue-600 text-blue-600 rounded-full',
   },
+  rust: {
+    class:
+      'text-sm border px-2 py-0 border-orange-600 text-orange-600 rounded-full',
+  },
   bioinformatics: {
     class:
       'text-sm border px-2 py-0 border-green-600 text-green-600 rounded-full',
@@ -36,10 +40,14 @@ const TagProperties: Record<string, TagProperties> = {
     class:
       'text-sm border px-2 py-0 border-indigo-600 text-indigo-600 rounded-full',
   },
+  __default: {
+    class:
+      'text-sm border px-2 py-0 border-gray-600 text-gray-600 rounded-full',
+  },
 }
 
 export const Tag: FC<Props> = ({ tag }) => {
-  const properties = TagProperties[tag]
+  const properties = TagProperties[tag] || TagProperties.__default
 
-  return <div className={properties.class}>{tag}</div>
+  return <div className={properties?.class}>{tag}</div>
 }
