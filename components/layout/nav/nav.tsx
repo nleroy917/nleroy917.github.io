@@ -14,18 +14,10 @@ export const Nav: FC = () => {
       <div className="flex-row items-center">
         {/* desktop/tablet */}
         <div className="hidden lg:flex ">
-          <Link href="/software" className="no-underline">
-            <NavItem>Software</NavItem>
-          </Link>
-          <Link href="/publications" className="no-underline">
-            <NavItem>Publications</NavItem>
-          </Link>
-          <Link href="/blog" className="no-underline">
-            <NavItem>Blog</NavItem>
-          </Link>
-          <Link href="/music-and-books" className="no-underline">
-            <NavItem>Music and books</NavItem>
-          </Link>
+          <NavItem href="/software">Software</NavItem>
+          <NavItem href="/publications">Publications</NavItem>
+          <NavItem href="/blog">Blog</NavItem>
+          <NavItem href="/favorites">Favorites</NavItem>
           {/* <Link href="/" className="no-underline">
             <NavItem>Resume</NavItem>
           </Link> */}

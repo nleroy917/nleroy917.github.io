@@ -1,6 +1,6 @@
 import { useOnClickOutside } from '@/hooks/useOnClickOutside'
-import Link from 'next/link'
 import { FC, useState, useRef, Fragment } from 'react'
+import { MobileNavItem } from './mobile-nav-item'
 
 export const HamburgerMenu: FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,44 +31,13 @@ export const HamburgerMenu: FC = () => {
             isOpen ? '' : 'hidden'
           } absolute right-0 w-48 bg-white p-2 mt-2 rounded-md shadow-lg border-2 border-black`}
         >
-          <li className="my-1 font-bold">
-            <Link href="/" className="text-black underline">
-              home
-            </Link>
-          </li>
-          <li className="my-1 font-bold">
-            <Link className="text-black underline" href="/software">
-              software
-            </Link>
-          </li>
-          <li className="my-1 font-bold">
-            <Link className="text-black underline" href="/publications">
-              publications
-            </Link>
-          </li>
-          <li className="my-1 font-bold">
-            <Link className="text-black underline" href="/blog">
-              blog
-            </Link>
-          </li>
-          <li className="my-1 font-bold">
-            <Link
-              className="text-black underline"
-              href="https://github.com/nleroy917"
-            >
-              github
-            </Link>
-          </li>
-          <li className="my-1 font-bold">
-            <Link className="text-black underline" href="/music-and-books">
-              music & books
-            </Link>
-          </li>
-          {/* <li className="my-1 font-bold">
-            <Link className="text-black underline" href="/">
-              resume
-            </Link>
-          </li> */}
+          <MobileNavItem href="/software">software</MobileNavItem>
+          <MobileNavItem href="/publications">publications</MobileNavItem>
+          <MobileNavItem href="/blog">blog</MobileNavItem>
+          <MobileNavItem href="https://github.com/nleroy917">
+            github
+          </MobileNavItem>
+          <MobileNavItem href="/favorites">favorites</MobileNavItem>
         </ul>
       </div>
     </Fragment>
