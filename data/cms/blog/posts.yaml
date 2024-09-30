@@ -23,3 +23,9 @@ posts:
     content: things-i-regret.md
     id: things-i-regret
     seo_image: https://imagedelivery.net/4S3ZTnvXbjmDbXox97-K_g/1a622a07-035a-4731-0846-fab8398ab200/public
+  - title: Why you should rewrite your entire codebase
+    description: Sometimes it's better to start from scratch.
+    date: 2024-09-30
+    content: refactors.md
+    id: refactors
+    seo_image: https://imagedelivery.net/4S3ZTnvXbjmDbXox97-K_g/366e7e93-ce8c-4b96-5a75-d769703ac400/public
