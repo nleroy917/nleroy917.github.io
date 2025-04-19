@@ -45,12 +45,9 @@ const Hunt: NextPage = () => {
               Congratulations! You have unlocked your final clue.
             </div>
             <div className="mt-4">
-              Youve solved every puzzle, retraced our past, At the home where my
-              story in Cville began. Now gather three numbers hidden in view—
-              Unlock one final map leading straight to me and you. Our journey
-              so far brings you here today, But where it truly ends, whos really
-              to say? Enter your numbers, the address revealed, A new chapter
-              awaits—our future unsealed.
+              A lake in the mountains, peaceful and wide, Where triathlon
+              strokes and laughter collide. Find the shore where calm waters
+              wake— The journey ends at our favorite lake.
             </div>
           </Fragment>
         )}
