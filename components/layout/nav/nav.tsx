@@ -17,7 +17,7 @@ export const Nav: FC = () => {
           <NavItem href="/software">Software</NavItem>
           <NavItem href="/publications">Publications</NavItem>
           <NavItem href="/blog">Blog</NavItem>
-          <NavItem href="/favorites">Favorites</NavItem>
+          {/* <NavItem href="/favorites">Favorites</NavItem> */}
           {/* <Link href="/" className="no-underline">
             <NavItem>Resume</NavItem>
           </Link> */}
