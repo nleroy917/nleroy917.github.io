@@ -34,7 +34,6 @@ export const HamburgerMenu: FC = () => {
           <MobileNavItem href="/software">software</MobileNavItem>
           <MobileNavItem href="/publications">publications</MobileNavItem>
           <MobileNavItem href="/blog">blog</MobileNavItem>
-          <MobileNavItem href="/hire">work with me</MobileNavItem>
           <MobileNavItem href="https://github.com/nleroy917">
             github
           </MobileNavItem>
