@@ -1,6 +1,0 @@
-- 5th-year PhD in working with transformers for single-cell genomics.
-- Experienced ML engineer, Rust + Python developer, and product builder.
-- Open-source author: Atacformer, Textractor, PEPhub.
-- Co-founded novacards.ai: helping 1,000+ med students study smarter.
-- **Looking for ML/AI research, bioinformatics engineering, or founding engineer roles.**
-- **Available Winter 2025 — and open for consulting engagements now!**

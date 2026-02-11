@@ -1,1 +1,0 @@
-Some links to software that was written by myself and my lab. I'm particularly interested in developing software that is accessible and intuitive for use in the broader scientific community. These days, I find myself working mostly in Rust, Python, and TypeScript to develop fast, scalable machine learning and bioinformatics tools. Here are some of the projects I've worked on:
