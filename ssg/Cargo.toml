@@ -1,0 +1,9 @@
+[package]
+name = "ssg"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+walkdir = "2"
+notify = { version = "6", features = ["macos_fsevent"] }
+clap = { version = "4", features = ["derive"] }

@@ -1,0 +1,19 @@
+# Build output
+out/
+
+# Rust
+ssg/target/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
+*~
+
+# Typst
+*.pdf
+
+# Claude
+settings.local.json
