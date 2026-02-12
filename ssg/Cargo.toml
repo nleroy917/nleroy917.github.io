@@ -1,5 +1,5 @@
 [package]
-name = "ssg"
+name = "kph"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,3 +7,14 @@ edition = "2021"
 walkdir = "2"
 notify = { version = "6", features = ["macos_fsevent"] }
 clap = { version = "4", features = ["derive"] }
+thiserror = "2.0.18"
+typst = { version = "0.14.2" }
+typst-kit = "0.14.2"
+zune-inflate = { version = "0.2", default-features = false, features = [
+  "gzip",
+  "std",
+] }
+tar = "0.4"
+ureq = "2.9"
+time = "0.3"
+typst-html = "0.14.2"

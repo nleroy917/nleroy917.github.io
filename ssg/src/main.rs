@@ -1,14 +1,15 @@
-use clap::Parser;
+use clap::{CommandFactory, Parser, Subcommand, arg};
 use notify::{RecursiveMode, Watcher};
 use std::fs;
 use std::io::{Read, Write};
 use std::net::{TcpListener, TcpStream};
 use std::path::{Path, PathBuf};
-use std::process::Command;
 use std::sync::mpsc::channel;
 use std::thread;
 use std::time::Duration;
 use walkdir::WalkDir;
+
+use kph::render::ContentRenderer;
 
 const HEAD_INJECT: &str = r#"
 <meta charset="utf-8">
@@ -19,25 +20,49 @@ const HEAD_INJECT: &str = r#"
 
 #[derive(Parser)]
 #[command(name = "ssg")]
-#[command(about = "Minimal static site generator for Typst -> HTML")]
+#[command(version, about = "Minimal static site generator for Typst -> HTML")]
 struct Cli {
-    /// Dev mode: watch for changes and serve locally
-    #[arg(short, long)]
-    dev: bool,
+    #[command(subcommand)]
+    command: Option<Commands>,
+}
 
-    /// Port for local server (used with --dev)
-    #[arg(short, long, default_value = "3000")]
-    port: u16,
+#[derive(Subcommand)]
+enum Commands {
+    /// Builds the static site into the `out/` directory.
+    Build {
+        /// Root directory of the project (defaults to current directory)
+        #[arg(short, long)]
+        root: Option<PathBuf>,
+    },
+    /// Starts a local development server with live reloading.
+    /// Watches for changes in `content/`, `static/`, and `lib/` directories.
+    /// Serves the site at http://localhost:3000 by default.
+    /// Use Ctrl+C to stop the server.
+    Dev {
+        /// Port for local server (defaults to 3000)
+        #[arg(short, long, default_value = "3000")]
+        port: u16,
+    },
 }
 
 fn main() {
     let cli = Cli::parse();
     let root = find_root();
 
-    if cli.dev {
-        dev(&root, cli.port);
-    } else {
-        build(&root);
+    let command = cli.command;
+    
+    match command {
+        Some(Commands::Build { root: cmd_root }) => {
+            let root = cmd_root.unwrap_or(root);
+            build(&root);
+        }
+        Some(Commands::Dev { port }) => {
+            dev(&root, port);
+        }
+        None => {
+            // print help
+            Cli::command().print_help().unwrap();
+        }
     }
 }
 
@@ -78,7 +103,7 @@ fn build(root: &Path) {
     let typ_files: Vec<PathBuf> = WalkDir::new(&content_dir)
         .into_iter()
         .filter_map(|e| e.ok())
-        .filter(|e| e.path().extension().map_or(false, |ext| ext == "typ"))
+        .filter(|e| e.path().extension().is_some_and(|ext| ext == "typ"))
         .map(|e| e.path().to_path_buf())
         .collect();
 
@@ -127,34 +152,27 @@ fn run_typst(root: &Path, input: &Path, output: &Path) -> bool {
         fs::create_dir_all(parent).ok();
     }
 
-    let result = Command::new("typst")
-        .args([
-            "compile",
-            "--features",
-            "html",
-            "--format",
-            "html",
-            "--root",
-            root.to_str().unwrap(),
-            input.to_str().unwrap(),
-            output.to_str().unwrap(),
-        ])
-        .output();
-
-    match result {
-        Ok(output) => {
-            if !output.status.success() {
-                eprintln!("  ERROR compiling:");
-                eprintln!("{}", String::from_utf8_lossy(&output.stderr));
-                return false;
-            }
-            true
-        }
+    let input_content = match fs::read_to_string(input) {
+        Ok(c) => c,
         Err(e) => {
-            eprintln!("  ERROR: Failed to run typst: {}", e);
-            false
+            eprintln!("  ERROR reading {}: {}", input.display(), e);
+            return false;
         }
+    };
+    let renderer = ContentRenderer::new(root.to_path_buf(), input_content);
+    let document = typst::compile(&renderer)
+        .output
+        .expect("Failed to render document");
+
+    let html = typst_html::html(&document).expect("Error exporting HTML");
+
+    if let Err(e) = fs::write(output, html) {
+        eprintln!("  ERROR writing {}: {}", output.display(), e);
+        return false;
     }
+
+    true
+
 }
 
 fn inject_head(html_file: &Path) {
@@ -169,7 +187,7 @@ fn inject_head(html_file: &Path) {
         content.replacen("<HEAD>", &format!("<HEAD>{}", HEAD_INJECT), 1)
     } else {
         format!(
-            "<!DOCTYPE html><html><head>{}</head><body>{}</body></html>",
+            "<!DOCTYPE html><html lang=\"en\"><head>{}</head><body>{}</body></html>",
             HEAD_INJECT, content
         )
     };
