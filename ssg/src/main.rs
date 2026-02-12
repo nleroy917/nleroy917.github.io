@@ -9,7 +9,7 @@ use std::thread;
 use std::time::Duration;
 use walkdir::WalkDir;
 
-use kph::render::ContentRenderer;
+use typsy::render::ContentRenderer;
 
 const HEAD_INJECT: &str = r#"
 <meta charset="utf-8">

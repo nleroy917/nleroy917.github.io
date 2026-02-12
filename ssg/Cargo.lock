@@ -1253,23 +1253,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "kph"
-version = "0.1.0"
-dependencies = [
- "clap",
- "notify",
- "tar",
- "thiserror",
- "time",
- "typst",
- "typst-html",
- "typst-kit",
- "ureq",
- "walkdir",
- "zune-inflate",
-]
-
-[[package]]
 name = "kqueue"
 version = "1.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2872,6 +2855,23 @@ dependencies = [
  "siphasher",
  "thin-vec",
  "unicode-math-class",
+]
+
+[[package]]
+name = "typsy"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "notify",
+ "tar",
+ "thiserror",
+ "time",
+ "typst",
+ "typst-html",
+ "typst-kit",
+ "ureq",
+ "walkdir",
+ "zune-inflate",
 ]
 
 [[package]]
