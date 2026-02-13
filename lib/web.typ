@@ -1,6 +1,4 @@
-// Shared web components for the site
-
-// Navigation bar
+// navigation bar
 #let nav() = {
   html.elem("nav")[
     #link("/")[home]
@@ -9,7 +7,7 @@
   ]
 }
 
-// Page footer
+// page footer
 #let footer() = {
   html.elem("footer")[
     #sym.copyright 2025 Nathan LeRoy
@@ -21,7 +19,7 @@
   ]
 }
 
-// Note/callout box
+// note/callout box
 #let note(title: "Note", body) = {
   html.elem("div", attrs: (class: "note"))[
     #html.elem("div", attrs: (class: "note-title"))[#title]
@@ -29,7 +27,7 @@
   ]
 }
 
-// Blog post entry for listing pages
+// blog post entry for listing pages
 #let post-entry(date, title, href) = {
   html.elem("li")[
     #html.elem("span", attrs: (class: "date"))[#date]
@@ -37,7 +35,7 @@
   ]
 }
 
-// Page wrapper - use at the top of each page
+// page wrapper - use at the top of each page
 #let page(title: none, body) = {
   set document(title: title) if title != none
 
@@ -50,7 +48,7 @@
   footer()
 }
 
-// Header section with title and optional subtitle
+// header section with title and optional subtitle
 #let header(title, subtitle: none) = {
   html.elem("header")[
     = #title
