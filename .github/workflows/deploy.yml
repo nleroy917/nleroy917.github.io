@@ -27,12 +27,11 @@ jobs:
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
 
-      - name: Build site generator
-        run: cargo build --release
-        working-directory: ssg
+      - name: Install typsy
+        run: cargo install --git https://github.com/nleroy917/typsy.git
 
       - name: Build site
-        run: ./ssg/target/release/typsy build
+        run: typsy build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
