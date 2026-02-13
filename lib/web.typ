@@ -38,6 +38,13 @@
 // page wrapper - use at the top of each page
 #let page(title: none, body) = {
   set document(title: title) if title != none
+  show math.equation.where(block: false): it => {
+    html.elem("span", attrs: (role: "math"), html.frame(it))
+  }
+  show math.equation.where(block: true): it => {
+    html.elem("figure", attrs: (role: "math"), html.frame(it))
+  }
+  show math.equation: set text(font: "Stix Two Math")
 
   nav()
 
