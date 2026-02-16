@@ -7,5 +7,6 @@
 Occasional thoughts on software, science, and other things.
 
 #html.elem("ul", attrs: (class: "post-list"))[
+  // #post-entry("Feb 2025", "Unplugging from the AI matrix", "/blog/ai.html")
   #post-entry("Feb 2025", "Hello, Typst", "/blog/hello-typst.html")
 ]

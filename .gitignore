@@ -17,3 +17,6 @@ ssg/target/
 
 # Claude
 settings.local.json
+
+# staged/in-draft
+content/blog/ai.typ
