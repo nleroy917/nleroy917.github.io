@@ -13,6 +13,12 @@ ML engineer. Researcher. Writer. Building tools that make AI accessible.
   #post-entry("Feb 2025", "Hello, Typst", "/blog/hello-typst.html")
 ]
 
+== Projects
+- #link("https://github.com/databio/gtars")[gtars: high-performance genomic interval analysis in Rust]
+- #link("/bm25viz")[BM25viz: interactive visualization of BM25 ranking scores]
+- #link("/spladeviz")[SPLADEviz: interactive visualization of SPLADE ranking scores]
+
+
 == Links
 
 - #link("https://github.com/nleroy917")[GitHub]
