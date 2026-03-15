@@ -9,7 +9,7 @@ ML engineer. Researcher. Writer. Building tools that make AI accessible.
 == Recent Posts
 
 #html.elem("ul", attrs: (class: "post-list"))[
-  // #post-entry("Feb 2025", "Unplugging from the AI matrix", "/blog/ai.html")
+  #post-entry("March 2026", "The last thing I knew everything about", "/blog/the-last-thing-i-knew-everything-about.html")
   #post-entry("Feb 2025", "Hello, Typst", "/blog/hello-typst.html")
 ]
 

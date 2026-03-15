@@ -2,7 +2,10 @@
 
 #show: page.with(title: "Hello, Typst - Nathan LeRoy")
 
-#header("Hello, Typst", subtitle: "February 11th, 2025")
+#header("Hello, Typst", subtitle: "February 11th, 2026")
+
+_This post was iterated on with AI. However, the core ideas and structure were entirely my own._
+
 
 I rebuilt my personal site using Typst's new HTML export feature.
 
