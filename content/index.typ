@@ -2,22 +2,22 @@
 
 #show: page.with(title: "Nathan LeRoy")
 
-#header("Nathan LeRoy", subtitle: "DevRel @ Qdrant")
+#header("Nathan LeRoy", subtitle: "Research Engineer @ Qdrant")
 
-ML engineer. Researcher. Writer. Building tools that make AI accessible.
+Building and learning about tools for AI, research, and developer workflows.
 
 == Recent Posts
 
 #html.elem("ul", attrs: (class: "post-list"))[
   #post-entry("March 2026", "The last thing I knew everything about", "/blog/the-last-thing-i-knew-everything-about.html")
-  #post-entry("Feb 2025", "Hello, Typst", "/blog/hello-typst.html")
+  #post-entry("Feb 2026", "Hello, Typst", "/blog/hello-typst.html")
 ]
 
 == Projects
 - #link("https://github.com/databio/gtars")[gtars: high-performance genomic interval analysis in Rust]
-- #link("/bm25viz")[BM25viz: interactive visualization of BM25 ranking scores]
-- #link("/spladeviz")[SPLADEviz: interactive visualization of SPLADE ranking scores]
-
+- #link("https://github.com/databio/geniml")[Atacformer: a transformer-based embedding model for scATAC-seq data]
+- #link("https://github.com/nleroy917/fastembed-bio")[fastembed-bio: fastembed fork that supports biological data]
+- #link("https://github.com/nleroy917/optipyzer")[Optipyzer: Multi-species codon optimization]
 
 == Links
 

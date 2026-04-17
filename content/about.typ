@@ -4,18 +4,10 @@
 
 #header("About")
 
-I'm a machine learning engineer and developer advocate based in the New York metro area. I work at Qdrant, where I help developers build AI applications with vector search.
-
-The most powerful ML systems are the ones people can actually use. My work focuses on making machine learning more accessible through better tooling, clearer explanations, and models that work outside the lab.
+I'm a researcher and engineer based in the New York metro area. I work at Qdrant, where I'm currently focused on helping developers use vector search and machine learning in production. I also use this site to #link("/blog")[share my thoughts] on things that are more broadly related to society and AI/research.
 
 == Background
 
-I #link("/dissertation")[completed my PhD] in computational biology at the University of Virginia, where I worked on representation learning for biological data. That experience taught me two things: 1) embeddings are surprisingly powerful, and 2) the gap between research and practice is often just good infrastructure and clear communication.
+I am a Research Engineer at Qdrant studying vector databases and adjacent technologies. I #link("/dissertation")[completed my PhD] in computational biology at the University of Virginia in late 2025, where I worked on representation learning approaches for scATAC-seq data. Prior to that, I was a software engineer and data scientist with Vero Software, and a research associate with the Indiana Biosciences Research Institute.
 
-Now I spend my time bridging that gap — writing, building demos, and helping developers understand how to put ML into production without a research team.
-
-== This Site
-
-This site is built with #link("https://typst.app")[Typst], compiled to HTML using a custom build system, and styled with plain CSS. The source is available on #link("https://github.com/nleroy917/nathanleroy.io")[GitHub].
-
-Read more in my #link("/blog/hello-typst.html")[blog post].
+I enjoy reading, writing, and learning about a wide variety of topics, including machine learning, philosophy, and the history of science. I also am a very big runner and enjoy spending time outdoors.
