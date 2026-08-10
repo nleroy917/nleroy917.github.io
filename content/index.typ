@@ -14,9 +14,9 @@ Building and learning about tools for AI, research, and developer workflows.
 ]
 
 == Projects
+- #link("https://github.com/qdrant-labs/supernova")[Supernova: billion-scale embedding generation, loading, and benchmarking toolkit]
 - #link("https://github.com/databio/gtars")[gtars: high-performance genomic interval analysis in Rust]
 - #link("https://github.com/databio/geniml")[Atacformer: a transformer-based embedding model for scATAC-seq data]
-- #link("https://github.com/nleroy917/fastembed-bio")[fastembed-bio: fastembed fork that supports biological data]
 - #link("https://github.com/nleroy917/optipyzer")[Optipyzer: Multi-species codon optimization]
 
 == Links
